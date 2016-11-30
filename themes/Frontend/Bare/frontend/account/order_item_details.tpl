@@ -109,6 +109,14 @@
 								{/if}
 							{/block}
 
+							{* availability warning*}
+							{block name='frontend_account_order_item_availability'}
+								{if $article.modus == 0 && ($article.active == 0 || !$article.article.isAvailable)}
+									{* show warning if article is not active or not available *}
+									{include file="frontend/_includes/messages.tpl" type="error" content="{s name='DetailBuyInfoNotAvailable' namespace='frontend/detail/buy'}{/s}"}
+								{/if}
+							{/block}
+
 							{* If ESD-Article *}
 							{block name='frontend_account_order_item_downloadlink'}
 								{if $article.esdarticle && $offerPosition.cleared|in_array:$sDownloadAvailablePaymentStatus}
@@ -147,7 +155,11 @@
 							{block name='frontend_account_order_item_price_value'}
 								<div class="column--value">
 									{if $article.price}
-										{$article.price} {$offerPosition.currency_html} *
+                                        {if $offerPosition.currency_position == "32"}
+											{$offerPosition.currency_html} {$article.price} *
+										{else}
+											{$article.price} {$offerPosition.currency_html} *
+										{/if}
 									{else}
 										{s name="OrderItemInfoFree"}{/s}
 									{/if}
@@ -167,7 +179,11 @@
 							{block name='frontend_account_order_item_amount_value'}
 								<div class="column--value">
 									{if $article.amount}
-										{$article.amount} {$offerPosition.currency_html} *
+                                        {if $offerPosition.currency_position == "32"}
+                                            {$offerPosition.currency_html} {$article.amount}  *
+                                        {else}
+                                            {$article.amount} {$offerPosition.currency_html} *
+                                        {/if}
 									{else}
 										{s name="OrderItemInfoFree"}{/s}
 									{/if}
@@ -267,14 +283,32 @@
 
 				{* Shopping costs *}
 				{block name="frontend_account_order_item_shippingamount"}
-					<p class="is--strong">{$offerPosition.invoice_shipping} {$offerPosition.currency_html}</p>
+                    <p class="is--strong">
+                        {if $offerPosition.currency_position == "32"}
+                            {$offerPosition.currency_html} {$offerPosition.invoice_shipping}
+                        {else}
+                            {$offerPosition.invoice_shipping} {$offerPosition.currency_html}
+                        {/if}
+                    </p>
 				{/block}
 
 				{block name="frontend_acccount_order_item_amount"}
 					{if $offerPosition.taxfree}
-						<p class="is--bold">{$offerPosition.invoice_amount_net} {$offerPosition.currency_html}</p>
+                        <p class="is--bold">
+                            {if $offerPosition.currency_position == "32"}
+                                {$offerPosition.currency_html} {$offerPosition.invoice_amount_net}
+                            {else}
+                                {$offerPosition.invoice_amount_net} {$offerPosition.currency_html}
+                            {/if}
+                        </p>
 					{else}
-						<p class="is--bold">{$offerPosition.invoice_amount} {$offerPosition.currency_html}</p>
+                        <p class="is--bold">
+                            {if $offerPosition.currency_position == "32"}
+                                {$offerPosition.currency_html} {$offerPosition.invoice_amount}
+                            {else}
+                                {$offerPosition.invoice_amount} {$offerPosition.currency_html}
+                            {/if}
+                        </p>
 					{/if}
 				{/block}
 			</div>

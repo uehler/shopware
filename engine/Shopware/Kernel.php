@@ -31,6 +31,7 @@ use Shopware\Bundle\ESIndexingBundle\DependencyInjection\CompilerPass\Synchroniz
 use Shopware\Bundle\ESIndexingBundle\DependencyInjection\CompilerPass\DataIndexerCompilerPass;
 use Shopware\Bundle\ESIndexingBundle\DependencyInjection\CompilerPass\MappingCompilerPass;
 use Shopware\Bundle\FormBundle\DependencyInjection\CompilerPass\FormPass;
+use Shopware\Bundle\MediaBundle\DependencyInjection\Compiler\MediaAdapterCompilerPass;
 use Shopware\Bundle\SearchBundle\DependencyInjection\Compiler\CriteriaRequestHandlerCompilerPass;
 use Shopware\Bundle\SearchBundleDBAL\DependencyInjection\Compiler\DBALCompilerPass;
 use Shopware\Bundle\SearchBundleES\DependencyInjection\CompilerPass\SearchHandlerCompilerPass;
@@ -304,24 +305,33 @@ class Kernel implements HttpKernelInterface
 
         $pluginRoot = $this->getRootDir().'/custom/plugins';
         foreach (new \DirectoryIterator($pluginRoot) as $pluginDir) {
-            if ($pluginDir->getBasename()[0] === '.' || $pluginDir->isFile()) {
+            if ($pluginDir->isFile() || $pluginDir->getBasename()[0] === '.') {
                 continue;
             }
 
             $pluginName = $pluginDir->getBasename();
-            if (!is_file($pluginDir->getPathname() . '/'. $pluginName . '.php')) {
+            $pluginFile = $pluginDir->getPathname() . '/'. $pluginName . '.php';
+            if (!is_file($pluginFile)) {
                 continue;
             }
 
             $namespace = $pluginName;
             $className = '\\' . $namespace . '\\' .  $pluginName;
-
             $classLoader->addPrefix($namespace, $pluginDir->getPathname());
 
-            $isActive = in_array($pluginName, $activePlugins);
+            if (!class_exists($className)) {
+                throw new \RuntimeException(sprintf('Unable to load class %s for plugin %s in file %s', $className, $pluginName, $pluginFile));
+            }
+
+            $isActive = in_array($pluginName, $activePlugins, true);
 
             /** @var Plugin $plugin */
             $plugin = new $className($isActive);
+
+            if (!$plugin instanceof Plugin) {
+                throw new \RuntimeException(sprintf('Class %s must extend %s in file %s', get_class($plugin), Plugin::class, $pluginFile));
+            }
+
             $this->plugins[$plugin->getName()] = $plugin;
         }
 
@@ -608,6 +618,7 @@ class Kernel implements HttpKernelInterface
         $container->addCompilerPass(new AddConstraintValidatorsPass());
         $container->addCompilerPass(new SearchRepositoryCompilerPass());
         $container->addCompilerPass(new AddConsoleCommandPass());
+        $container->addCompilerPass(new MediaAdapterCompilerPass());
 
         if ($this->isElasticSearchEnabled()) {
             $container->addCompilerPass(new SearchHandlerCompilerPass());
