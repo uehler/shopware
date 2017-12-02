@@ -148,12 +148,17 @@ class Menu extends ModelEntity
         return $this->label;
     }
 
+
     /**
      * @param string $label
+     *
+     * @return Menu
      */
     public function setLabel($label)
     {
         $this->label = $label;
+
+        return $this;
     }
 
     /**
@@ -164,12 +169,17 @@ class Menu extends ModelEntity
         return $this->onclick;
     }
 
+
     /**
      * @param string $onclick
+     *
+     * @return Menu
      */
     public function setOnclick($onclick)
     {
         $this->onclick = $onclick;
+
+        return $this;
     }
 
     /**
@@ -180,12 +190,17 @@ class Menu extends ModelEntity
         return $this->class;
     }
 
+
     /**
      * @param string $class
+     *
+     * @return Menu
      */
     public function setClass($class)
     {
         $this->class = $class;
+
+        return $this;
     }
 
     /**
@@ -196,12 +211,17 @@ class Menu extends ModelEntity
         return $this->position;
     }
 
+
     /**
      * @param int $position
+     *
+     * @return Menu
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -212,12 +232,17 @@ class Menu extends ModelEntity
         return $this->active;
     }
 
+
     /**
      * @param bool $active
+     *
+     * @return Menu
      */
     public function setActive($active)
     {
         $this->active = $active;
+
+        return $this;
     }
 
     /**
@@ -228,12 +253,17 @@ class Menu extends ModelEntity
         return $this->pluginId;
     }
 
+
     /**
      * @param int $pluginId
+     *
+     * @return Menu
      */
     public function setPluginId($pluginId)
     {
         $this->pluginId = $pluginId;
+
+        return $this;
     }
 
     /**
@@ -244,12 +274,17 @@ class Menu extends ModelEntity
         return $this->controller;
     }
 
+
     /**
      * @param string $controller
+     *
+     * @return Menu
      */
     public function setController($controller)
     {
         $this->controller = $controller;
+
+        return $this;
     }
 
     /**
@@ -260,12 +295,17 @@ class Menu extends ModelEntity
         return $this->action;
     }
 
+
     /**
      * @param string $action
+     *
+     * @return Menu
      */
     public function setAction($action)
     {
         $this->action = $action;
+
+        return $this;
     }
 
     /**
@@ -276,12 +316,17 @@ class Menu extends ModelEntity
         return $this->shortcut;
     }
 
+
     /**
      * @param string $shortcut
+     *
+     * @return Menu
      */
     public function setShortcut($shortcut)
     {
         $this->shortcut = $shortcut;
+
+        return $this;
     }
 
     /**
@@ -292,8 +337,11 @@ class Menu extends ModelEntity
         return $this->parent;
     }
 
+
     /**
      * @param Menu $parent
+     *
+     * @return Menu
      */
     public function setParent(Menu $parent = null)
     {
@@ -302,6 +350,8 @@ class Menu extends ModelEntity
             $parent->getChildren()->add($this);
         }
         $this->parent = $parent;
+
+        return $this;
     }
 
     /**
@@ -312,12 +362,17 @@ class Menu extends ModelEntity
         return $this->children;
     }
 
+
     /**
      * @param Menu[] $children
+     *
+     * @return Menu
      */
     public function setChildren($children)
     {
         $this->children = $children;
+
+        return $this;
     }
 
     /**
@@ -344,11 +399,16 @@ class Menu extends ModelEntity
         return $this->plugin;
     }
 
+
     /**
      * @param \Shopware\Models\Plugin\Plugin $plugin
+     *
+     * @return Menu
      */
     public function setPlugin($plugin)
     {
         $this->plugin = $plugin;
+
+        return $this;
     }
 }
