@@ -521,12 +521,17 @@ class Country extends ModelEntity
         return $this;
     }
 
+
     /**
      * @param int $displayStateInRegistration
+     *
+     * @return Country
      */
     public function setDisplayStateInRegistration($displayStateInRegistration)
     {
         $this->displayStateInRegistration = $displayStateInRegistration;
+
+        return $this;
     }
 
     /**
@@ -537,12 +542,17 @@ class Country extends ModelEntity
         return $this->displayStateInRegistration;
     }
 
+
     /**
      * @param bool $forceStateInRegistration
+     *
+     * @return Country
      */
     public function setForceStateInRegistration($forceStateInRegistration)
     {
         $this->forceStateInRegistration = $forceStateInRegistration;
+
+        return $this;
     }
 
     /**

@@ -187,12 +187,17 @@ class State extends ModelEntity
         return $this->position;
     }
 
+
     /**
      * @param int $position
+     *
+     * @return State
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
