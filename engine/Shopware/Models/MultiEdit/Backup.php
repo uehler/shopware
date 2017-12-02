@@ -99,12 +99,17 @@ class Backup extends ModelEntity
      */
     private $hash;
 
+
     /**
      * @param \DateTime $date
+     *
+     * @return Backup
      */
     public function setDate($date)
     {
         $this->date = $date;
+
+        return $this;
     }
 
     /**
@@ -115,12 +120,17 @@ class Backup extends ModelEntity
         return $this->date;
     }
 
+
     /**
      * @param string $filterString
+     *
+     * @return Backup
      */
     public function setFilterString($filterString)
     {
         $this->filterString = $filterString;
+
+        return $this;
     }
 
     /**
@@ -139,12 +149,17 @@ class Backup extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param int $items
+     *
+     * @return Backup
      */
     public function setItems($items)
     {
         $this->items = $items;
+
+        return $this;
     }
 
     /**
@@ -155,12 +170,17 @@ class Backup extends ModelEntity
         return $this->items;
     }
 
+
     /**
      * @param string $hash
+     *
+     * @return Backup
      */
     public function setHash($hash)
     {
         $this->hash = $hash;
+
+        return $this;
     }
 
     /**
@@ -171,12 +191,17 @@ class Backup extends ModelEntity
         return $this->hash;
     }
 
+
     /**
      * @param string $operations
+     *
+     * @return Backup
      */
     public function setOperationString($operations)
     {
         $this->operationString = $operations;
+
+        return $this;
     }
 
     /**
@@ -187,12 +212,17 @@ class Backup extends ModelEntity
         return $this->operationString;
     }
 
+
     /**
      * @param string $path
+     *
+     * @return Backup
      */
     public function setPath($path)
     {
         $this->path = $path;
+
+        return $this;
     }
 
     /**
@@ -203,12 +233,17 @@ class Backup extends ModelEntity
         return $this->path;
     }
 
+
     /**
      * @param int $size
+     *
+     * @return Backup
      */
     public function setSize($size)
     {
         $this->size = $size;
+
+        return $this;
     }
 
     /**

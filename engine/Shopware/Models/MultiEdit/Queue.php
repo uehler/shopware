@@ -111,12 +111,17 @@ class Queue extends ModelEntity
         $this->details = new ArrayCollection();
     }
 
+
     /**
      * @param \DateTime $created
+     *
+     * @return Queue
      */
     public function setCreated(\DateTime $created)
     {
         $this->created = $created;
+
+        return $this;
     }
 
     /**
@@ -127,12 +132,17 @@ class Queue extends ModelEntity
         return $this->created;
     }
 
+
     /**
      * @param $filterString
+     *
+     * @return Queue
      */
     public function setFilterString($filterString)
     {
         $this->filterString = $filterString;
+
+        return $this;
     }
 
     /**
@@ -143,12 +153,17 @@ class Queue extends ModelEntity
         return $this->filterString;
     }
 
+
     /**
      * @param string $operations
+     *
+     * @return Queue
      */
     public function setOperations($operations)
     {
         $this->operations = $operations;
+
+        return $this;
     }
 
     /**
@@ -159,12 +174,17 @@ class Queue extends ModelEntity
         return $this->operations;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $articleDetails
+     *
+     * @return Queue
      */
     public function setArticleDetails($articleDetails)
     {
         $this->articleDetails = $articleDetails;
+
+        return $this;
     }
 
     /**
@@ -175,12 +195,17 @@ class Queue extends ModelEntity
         return $this->articleDetails;
     }
 
+
     /**
      * @param string $resource
+     *
+     * @return Queue
      */
     public function setResource($resource)
     {
         $this->resource = $resource;
+
+        return $this;
     }
 
     /**
@@ -191,12 +216,17 @@ class Queue extends ModelEntity
         return $this->resource;
     }
 
+
     /**
      * @param string $initialSize
+     *
+     * @return Queue
      */
     public function setInitialSize($initialSize)
     {
         $this->initialSize = $initialSize;
+
+        return $this;
     }
 
     /**
@@ -215,12 +245,17 @@ class Queue extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param bool $active
+     *
+     * @return Queue
      */
     public function setActive($active)
     {
         $this->active = $active;
+
+        return $this;
     }
 
     /**

@@ -79,12 +79,17 @@ class QueueArticle extends ModelEntity
      */
     private $queueId;
 
+
     /**
      * @param mixed $detail
+     *
+     * @return QueueArticle
      */
     public function setDetail($detail)
     {
         $this->detail = $detail;
+
+        return $this;
     }
 
     /**
@@ -95,12 +100,17 @@ class QueueArticle extends ModelEntity
         return $this->detail;
     }
 
+
     /**
      * @param mixed $queue
+     *
+     * @return QueueArticle
      */
     public function setQueue($queue)
     {
         $this->queue = $queue;
+
+        return $this;
     }
 
     /**

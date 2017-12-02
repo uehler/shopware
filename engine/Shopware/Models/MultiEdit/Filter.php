@@ -92,12 +92,17 @@ class Filter extends ModelEntity
      */
     private $isSimple = false;
 
+
     /**
      * @param \DateTime $created
+     *
+     * @return Filter
      */
     public function setCreated(\DateTime $created)
     {
         $this->created = $created;
+
+        return $this;
     }
 
     /**
@@ -108,12 +113,17 @@ class Filter extends ModelEntity
         return $this->created;
     }
 
+
     /**
      * @param string $filterString
+     *
+     * @return Filter
      */
     public function setFilterString($filterString)
     {
         $this->filterString = $filterString;
+
+        return $this;
     }
 
     /**
@@ -124,12 +134,17 @@ class Filter extends ModelEntity
         return $this->filterString;
     }
 
+
     /**
      * @param bool $isFavorite
+     *
+     * @return Filter
      */
     public function setIsFavorite($isFavorite)
     {
         $this->isFavorite = $isFavorite;
+
+        return $this;
     }
 
     /**
@@ -140,12 +155,17 @@ class Filter extends ModelEntity
         return $this->isFavorite;
     }
 
+
     /**
      * @param bool $is_simple
+     *
+     * @return Filter
      */
     public function setIsSimple($is_simple)
     {
         $this->isSimple = $is_simple;
+
+        return $this;
     }
 
     /**
@@ -156,12 +176,17 @@ class Filter extends ModelEntity
         return $this->isSimple;
     }
 
+
     /**
      * @param string $name
+     *
+     * @return Filter
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -172,12 +197,17 @@ class Filter extends ModelEntity
         return $this->name;
     }
 
+
     /**
      * @param string $description
+     *
+     * @return Filter
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
