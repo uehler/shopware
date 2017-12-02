@@ -119,12 +119,17 @@ class Element extends ModelEntity
         return $this->name;
     }
 
+
     /**
      * @param string $name
+     *
+     * @return Element
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -135,12 +140,17 @@ class Element extends ModelEntity
         return $this->type;
     }
 
+
     /**
      * @param string $type
+     *
+     * @return Element
      */
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
     }
 
     /**
@@ -151,12 +161,17 @@ class Element extends ModelEntity
         return $this->default;
     }
 
+
     /**
      * @param string $default
+     *
+     * @return Element
      */
     public function setDefault($default)
     {
         $this->default = $default;
+
+        return $this;
     }
 
     /**
@@ -167,12 +182,17 @@ class Element extends ModelEntity
         return $this->store;
     }
 
+
     /**
      * @param string $store
+     *
+     * @return Element
      */
     public function setStore($store)
     {
         $this->store = $store;
+
+        return $this;
     }
 
     /**
@@ -183,12 +203,17 @@ class Element extends ModelEntity
         return $this->label;
     }
 
+
     /**
      * @param string $label
+     *
+     * @return Element
      */
     public function setLabel($label)
     {
         $this->label = $label;
+
+        return $this;
     }
 
     /**
@@ -199,12 +224,17 @@ class Element extends ModelEntity
         return $this->required;
     }
 
+
     /**
      * @param bool $required
+     *
+     * @return Element
      */
     public function setRequired($required)
     {
         $this->required = $required;
+
+        return $this;
     }
 
     /**
@@ -215,12 +245,17 @@ class Element extends ModelEntity
         return $this->help;
     }
 
+
     /**
      * @param string $help
+     *
+     * @return Element
      */
     public function setHelp($help)
     {
         $this->help = $help;
+
+        return $this;
     }
 
     /**
@@ -231,12 +266,17 @@ class Element extends ModelEntity
         return $this->translatable;
     }
 
+
     /**
      * @param bool $translatable
+     *
+     * @return Element
      */
     public function setTranslatable($translatable)
     {
         $this->translatable = $translatable;
+
+        return $this;
     }
 
     /**
@@ -247,12 +287,17 @@ class Element extends ModelEntity
         return $this->variantable;
     }
 
+
     /**
      * @param bool $variantable
+     *
+     * @return Element
      */
     public function setVariantable($variantable)
     {
         $this->variantable = $variantable;
+
+        return $this;
     }
 
     /**
@@ -263,11 +308,16 @@ class Element extends ModelEntity
         return $this->position;
     }
 
+
     /**
      * @param string $position
+     *
+     * @return Element
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 }

@@ -604,12 +604,17 @@ class Detail extends ModelEntity
         return $this->width;
     }
 
+
     /**
      * @param float $width
+     *
+     * @return Detail
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 
     /**
@@ -620,12 +625,17 @@ class Detail extends ModelEntity
         return $this->len;
     }
 
+
     /**
      * @param float $length
+     *
+     * @return Detail
      */
     public function setLen($length)
     {
         $this->len = $length;
+
+        return $this;
     }
 
     /**
@@ -636,12 +646,17 @@ class Detail extends ModelEntity
         return $this->height;
     }
 
+
     /**
      * @param float $height
+     *
+     * @return Detail
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
+        return $this;
     }
 
     /**
@@ -652,12 +667,17 @@ class Detail extends ModelEntity
         return $this->ean;
     }
 
+
     /**
      * @param float $ean
+     *
+     * @return Detail
      */
     public function setEan($ean)
     {
         $this->ean = $ean;
+
+        return $this;
     }
 
     /**
@@ -689,7 +709,7 @@ class Detail extends ModelEntity
      *
      * @param string $shippingTime
      *
-     * @return Article
+     * @return Detail
      */
     public function setShippingTime($shippingTime)
     {
@@ -713,7 +733,7 @@ class Detail extends ModelEntity
      *
      * @param int $shippingFree
      *
-     * @return Article
+     * @return Detail
      */
     public function setShippingFree($shippingFree)
     {
@@ -737,7 +757,7 @@ class Detail extends ModelEntity
      *
      * @param \DateTime|string|null $releaseDate
      *
-     * @return Article
+     * @return Detail
      */
     public function setReleaseDate($releaseDate = null)
     {
@@ -765,7 +785,7 @@ class Detail extends ModelEntity
      *
      * @param int $minPurchase
      *
-     * @return Article
+     * @return Detail
      */
     public function setMinPurchase($minPurchase)
     {
@@ -793,7 +813,7 @@ class Detail extends ModelEntity
      *
      * @param int $purchaseSteps
      *
-     * @return Article
+     * @return Detail
      */
     public function setPurchaseSteps($purchaseSteps)
     {
@@ -817,7 +837,7 @@ class Detail extends ModelEntity
      *
      * @param int $maxPurchase
      *
-     * @return Article
+     * @return Detail
      */
     public function setMaxPurchase($maxPurchase)
     {
@@ -937,20 +957,30 @@ class Detail extends ModelEntity
         return $this->configuratorOptions;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $configuratorOptions
+     *
+     * @return Detail
      */
     public function setConfiguratorOptions($configuratorOptions)
     {
         $this->configuratorOptions = $configuratorOptions;
+
+        return $this;
     }
+
 
     /**
      * @param \Shopware\Models\Article\Esd $esd
+     *
+     * @return Detail
      */
     public function setEsd($esd)
     {
         $this->esd = $esd;
+
+        return $this;
     }
 
     /**

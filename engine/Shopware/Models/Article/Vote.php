@@ -403,11 +403,16 @@ class Vote extends ModelEntity
         return $this->shop;
     }
 
+
     /**
      * @param \Shopware\Models\Shop\Shop|null $shop
+     *
+     * @return Vote
      */
     public function setShop($shop)
     {
         $this->shop = $shop;
+
+        return $this;
     }
 }

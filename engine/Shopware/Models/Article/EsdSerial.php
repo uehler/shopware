@@ -95,12 +95,17 @@ class EsdSerial extends ModelEntity
         return $this->esd;
     }
 
+
     /**
      * @param string $serialnumber
+     *
+     * @return EsdSerial
      */
     public function setSerialnumber($serialnumber)
     {
         $this->serialnumber = $serialnumber;
+
+        return $this;
     }
 
     /**

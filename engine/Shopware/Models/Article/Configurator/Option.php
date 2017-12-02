@@ -136,10 +136,14 @@ class Option extends ModelEntity
 
     /**
      * @param string $name
+     *
+     * @return Option
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -152,10 +156,14 @@ class Option extends ModelEntity
 
     /**
      * @param int $position
+     *
+     * @return Option
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -166,12 +174,17 @@ class Option extends ModelEntity
         return $this->group;
     }
 
+
     /**
      * @param \Shopware\Models\Article\Configurator\Group $group
+     *
+     * @return Option
      */
     public function setGroup($group)
     {
         $this->group = $group;
+
+        return $this;
     }
 
     /**
@@ -182,12 +195,17 @@ class Option extends ModelEntity
         return $this->dependencyParents;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $dependencyParents
+     *
+     * @return Option
      */
     public function setDependencyParents($dependencyParents)
     {
         $this->dependencyParents = $dependencyParents;
+
+        return $this;
     }
 
     /**
@@ -198,12 +216,17 @@ class Option extends ModelEntity
         return $this->dependencyChildren;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $dependencyChildren
+     *
+     * @return Option
      */
     public function setDependencyChildren($dependencyChildren)
     {
         $this->dependencyChildren = $dependencyChildren;
+
+        return $this;
     }
 
     /**

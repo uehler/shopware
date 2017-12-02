@@ -89,12 +89,17 @@ class PriceVariation extends ModelEntity
         return $this->variation;
     }
 
+
     /**
      * @param float $variation
+     *
+     * @return PriceVariation
      */
     public function setVariation($variation)
     {
         $this->variation = $variation;
+
+        return $this;
     }
 
     /**
@@ -105,20 +110,30 @@ class PriceVariation extends ModelEntity
         return $this->configuratorSet;
     }
 
+
     /**
      * @param \Shopware\Models\Article\Configurator\Set $configuratorSet
+     *
+     * @return PriceVariation
      */
     public function setConfiguratorSet($configuratorSet)
     {
         $this->configuratorSet = $configuratorSet;
+
+        return $this;
     }
+
 
     /**
      * @param string $options
+     *
+     * @return PriceVariation
      */
     public function setOptions($options)
     {
         $this->options = $options;
+
+        return $this;
     }
 
     /**
@@ -137,11 +152,16 @@ class PriceVariation extends ModelEntity
         return $this->isGross;
     }
 
+
     /**
      * @param int $isGross
+     *
+     * @return PriceVariation
      */
     public function setIsGross($isGross)
     {
         $this->isGross = $isGross;
+
+        return $this;
     }
 }

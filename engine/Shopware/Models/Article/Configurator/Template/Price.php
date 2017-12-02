@@ -300,9 +300,13 @@ class Price extends LazyFetchModelEntity
 
     /**
      * @param \Shopware\Models\Article\Configurator\Template\Template $template
+     *
+     * @return Price
      */
     public function setTemplate($template)
     {
         $this->template = $template;
+
+        return $this;
     }
 }

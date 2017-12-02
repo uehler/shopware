@@ -154,14 +154,19 @@ class Supplier extends ModelEntity
         $this->changed = new \DateTime();
     }
 
+
     /**
      * Sets the primary key
      *
      * @param $id
+     *
+     * @return Supplier
      */
     public function setPrimaryIdentifier($id)
     {
         $this->id = (int) $id;
+
+        return $this;
     }
 
     /**
@@ -314,12 +319,17 @@ class Supplier extends ModelEntity
         return $this->setOneToOne($attribute, '\Shopware\Models\Attribute\ArticleSupplier', 'attribute', 'articleSupplier');
     }
 
+
     /**
      * @param string $metaTitle
+     *
+     * @return Supplier
      */
     public function setMetaTitle($metaTitle)
     {
         $this->metaTitle = $metaTitle;
+
+        return $this;
     }
 
     /**
@@ -330,12 +340,17 @@ class Supplier extends ModelEntity
         return $this->metaTitle;
     }
 
+
     /**
      * @param string $metaDescription
+     *
+     * @return Supplier
      */
     public function setMetaDescription($metaDescription)
     {
         $this->metaDescription = $metaDescription;
+
+        return $this;
     }
 
     /**
@@ -346,12 +361,17 @@ class Supplier extends ModelEntity
         return $this->metaDescription;
     }
 
+
     /**
      * @param string $metaKeywords
+     *
+     * @return Supplier
      */
     public function setMetaKeywords($metaKeywords)
     {
         $this->metaKeywords = $metaKeywords;
+
+        return $this;
     }
 
     /**

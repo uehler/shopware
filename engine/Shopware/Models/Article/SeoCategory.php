@@ -94,12 +94,17 @@ class SeoCategory extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param \Shopware\Models\Article\Article $article
+     *
+     * @return SeoCategory
      */
     public function setArticle($article)
     {
         $this->article = $article;
+
+        return $this;
     }
 
     /**
@@ -110,12 +115,17 @@ class SeoCategory extends ModelEntity
         return $this->article;
     }
 
+
     /**
      * @param \Shopware\Models\Category\Category $category
+     *
+     * @return SeoCategory
      */
     public function setCategory($category)
     {
         $this->category = $category;
+
+        return $this;
     }
 
     /**
@@ -126,12 +136,17 @@ class SeoCategory extends ModelEntity
         return $this->category;
     }
 
+
     /**
      * @param \Shopware\Models\Shop\Shop $shop
+     *
+     * @return SeoCategory
      */
     public function setShop($shop)
     {
         $this->shop = $shop;
+
+        return $this;
     }
 
     /**

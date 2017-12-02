@@ -1037,6 +1037,8 @@ class Article extends ModelEntity
     public function setTax($tax)
     {
         $this->tax = $tax;
+
+        return $this;
     }
 
     /**
@@ -1364,9 +1366,13 @@ class Article extends ModelEntity
 
     /**
      * @param ArrayCollection $relatedProductStreams
+     *
+     * @return Article
      */
     public function setRelatedProductStreams($relatedProductStreams)
     {
         $this->relatedProductStreams = $relatedProductStreams;
+
+        return $this;
     }
 }

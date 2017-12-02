@@ -196,12 +196,17 @@ class Image extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param string $extension
+     *
+     * @return Image
      */
     public function setExtension($extension)
     {
         $this->extension = $extension;
+
+        return $this;
     }
 
     /**
@@ -212,12 +217,17 @@ class Image extends ModelEntity
         return $this->extension;
     }
 
+
     /**
      * @param int $height
+     *
+     * @return Image
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
+        return $this;
     }
 
     /**
@@ -228,12 +238,17 @@ class Image extends ModelEntity
         return $this->height;
     }
 
+
     /**
      * @param int $main
+     *
+     * @return Image
      */
     public function setMain($main)
     {
         $this->main = $main;
+
+        return $this;
     }
 
     /**
@@ -244,12 +259,17 @@ class Image extends ModelEntity
         return $this->main;
     }
 
+
     /**
      * @param string $description
+     *
+     * @return Image
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
@@ -260,12 +280,17 @@ class Image extends ModelEntity
         return $this->description;
     }
 
+
     /**
      * @param string $path
+     *
+     * @return Image
      */
     public function setPath($path)
     {
         $this->path = $path;
+
+        return $this;
     }
 
     /**
@@ -276,12 +301,17 @@ class Image extends ModelEntity
         return $this->path;
     }
 
+
     /**
      * @param int $position
+     *
+     * @return Image
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -292,12 +322,17 @@ class Image extends ModelEntity
         return $this->position;
     }
 
+
     /**
      * @param string $relations
+     *
+     * @return Image
      */
     public function setRelations($relations)
     {
         $this->relations = $relations;
+
+        return $this;
     }
 
     /**
@@ -308,12 +343,17 @@ class Image extends ModelEntity
         return $this->relations;
     }
 
+
     /**
      * @param int $width
+     *
+     * @return Image
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 
     /**
@@ -332,12 +372,17 @@ class Image extends ModelEntity
         return $this->article;
     }
 
+
     /**
      * @param \Shopware\Models\Article\Article $article
+     *
+     * @return Image
      */
     public function setArticle($article)
     {
         $this->article = $article;
+
+        return $this;
     }
 
     /**
@@ -384,12 +429,17 @@ class Image extends ModelEntity
         return $this->children;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $children
+     *
+     * @return Image
      */
     public function setChildren($children)
     {
         $this->children = $children;
+
+        return $this;
     }
 
     /**
@@ -400,12 +450,17 @@ class Image extends ModelEntity
         return $this->parent;
     }
 
+
     /**
      * @param Image $parent
+     *
+     * @return Image
      */
     public function setParent($parent)
     {
         $this->parent = $parent;
+
+        return $this;
     }
 
     /**
@@ -416,12 +471,17 @@ class Image extends ModelEntity
         return $this->articleDetail;
     }
 
+
     /**
      * @param \Shopware\Models\Article\Detail $articleDetail
+     *
+     * @return Image
      */
     public function setArticleDetail($articleDetail)
     {
         $this->articleDetail = $articleDetail;
+
+        return $this;
     }
 
     /**
@@ -432,11 +492,16 @@ class Image extends ModelEntity
         return $this->media;
     }
 
+
     /**
      * @param Media $media
+     *
+     * @return Image
      */
     public function setMedia($media)
     {
         $this->media = $media;
+
+        return $this;
     }
 }

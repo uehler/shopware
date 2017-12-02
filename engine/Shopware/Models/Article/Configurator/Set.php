@@ -135,12 +135,17 @@ class Set extends ModelEntity
         return $this->name;
     }
 
+
     /**
      * @param string $name
+     *
+     * @return Set
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -151,12 +156,17 @@ class Set extends ModelEntity
         return $this->public;
     }
 
+
     /**
      * @param int $public
+     *
+     * @return Set
      */
     public function setPublic($public)
     {
         $this->public = $public;
+
+        return $this;
     }
 
     /**
@@ -187,12 +197,17 @@ class Set extends ModelEntity
         return $this->articles;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $articles
+     *
+     * @return Set
      */
     public function setArticles($articles)
     {
         $this->articles = $articles;
+
+        return $this;
     }
 
     /**
@@ -203,12 +218,17 @@ class Set extends ModelEntity
         return $this->dependencies;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $dependencies
+     *
+     * @return Set
      */
     public function setDependencies($dependencies)
     {
         $this->dependencies = $dependencies;
+
+        return $this;
     }
 
     /**
@@ -239,11 +259,16 @@ class Set extends ModelEntity
         return $this->type;
     }
 
+
     /**
      * @param int $type
+     *
+     * @return Set
      */
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
     }
 }

@@ -164,12 +164,17 @@ class Esd extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $serials
+     *
+     * @return Esd
      */
     public function setSerials($serials)
     {
         $this->serials = $serials;
+
+        return $this;
     }
 
     /**
@@ -196,13 +201,18 @@ class Esd extends ModelEntity
         return $this->article;
     }
 
+
     /**
      * @param \Shopware\Models\Article\Detail $articleDetail
+     *
+     * @return Esd
      */
     public function setArticleDetail(\Shopware\Models\Article\Detail $articleDetail)
     {
         $this->articleDetail = $articleDetail;
         $this->article = $articleDetail->getArticle();
+
+        return $this;
     }
 
     /**
@@ -237,12 +247,17 @@ class Esd extends ModelEntity
         return $this->date;
     }
 
+
     /**
      * @param string $file
+     *
+     * @return Esd
      */
     public function setFile($file)
     {
         $this->file = $file;
+
+        return $this;
     }
 
     /**
@@ -253,12 +268,17 @@ class Esd extends ModelEntity
         return $this->file;
     }
 
+
     /**
      * @param bool $hasSerials
+     *
+     * @return Esd
      */
     public function setHasSerials($hasSerials)
     {
         $this->hasSerials = $hasSerials;
+
+        return $this;
     }
 
     /**
@@ -269,12 +289,17 @@ class Esd extends ModelEntity
         return $this->hasSerials;
     }
 
+
     /**
      * @param int $maxdownloads
+     *
+     * @return Esd
      */
     public function setMaxdownloads($maxdownloads)
     {
         $this->maxdownloads = $maxdownloads;
+
+        return $this;
     }
 
     /**
@@ -285,12 +310,17 @@ class Esd extends ModelEntity
         return $this->maxdownloads;
     }
 
+
     /**
      * @param bool $notification
+     *
+     * @return Esd
      */
     public function setNotification($notification)
     {
         $this->notification = $notification;
+
+        return $this;
     }
 
     /**

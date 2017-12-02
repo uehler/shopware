@@ -461,7 +461,7 @@ class Template extends ModelEntity
     /**
      * @param $article
      *
-     * @return \Shopware\Models\Article\Article
+     * @return Template
      */
     public function setArticle($article)
     {
@@ -516,10 +516,14 @@ class Template extends ModelEntity
 
     /**
      * @param float $width
+     *
+     * @return Template
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 
     /**
@@ -532,10 +536,14 @@ class Template extends ModelEntity
 
     /**
      * @param float $length
+     *
+     * @return Template
      */
     public function setLen($length)
     {
         $this->len = $length;
+
+        return $this;
     }
 
     /**
@@ -548,10 +556,14 @@ class Template extends ModelEntity
 
     /**
      * @param float $height
+     *
+     * @return Template
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
+        return $this;
     }
 
     /**
@@ -564,10 +576,14 @@ class Template extends ModelEntity
 
     /**
      * @param float $ean
+     *
+     * @return Template
      */
     public function setEan($ean)
     {
         $this->ean = $ean;
+
+        return $this;
     }
 
     /**
@@ -575,7 +591,7 @@ class Template extends ModelEntity
      *
      * @param float $purchasePrice
      *
-     * @return Article
+     * @return Template
      */
     public function setPurchasePrice($purchasePrice)
     {

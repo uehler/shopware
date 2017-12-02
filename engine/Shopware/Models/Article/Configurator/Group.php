@@ -109,10 +109,14 @@ class Group extends ModelEntity
 
     /**
      * @param string $name
+     *
+     * @return Group
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -125,10 +129,14 @@ class Group extends ModelEntity
 
     /**
      * @param string $description
+     *
+     * @return Group
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
@@ -141,10 +149,14 @@ class Group extends ModelEntity
 
     /**
      * @param int $position
+     *
+     * @return Group
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -157,10 +169,14 @@ class Group extends ModelEntity
 
     /**
      * @param \Shopware\Models\Article\Configurator\Set $sets
+     *
+     * @return Group
      */
     public function setSets($sets)
     {
         $this->sets = $sets;
+
+        return $this;
     }
 
     /**
@@ -179,6 +195,8 @@ class Group extends ModelEntity
     public function setOptions($options)
     {
         $this->options = $options;
+
+        return $this;
     }
 
     /**

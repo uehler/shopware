@@ -91,12 +91,17 @@ class Rule extends ModelEntity
         return $this->option;
     }
 
+
     /**
      * @param \Shopware\Models\Article\Configurator\Option $option
+     *
+     * @return Rule
      */
     public function setOption($option)
     {
         $this->option = $option;
+
+        return $this;
     }
 
     /**
@@ -107,11 +112,16 @@ class Rule extends ModelEntity
         return $this->mapping;
     }
 
+
     /**
      * @param \Shopware\Models\Article\Image\Mapping $mapping
+     *
+     * @return Rule
      */
     public function setMapping($mapping)
     {
         $this->mapping = $mapping;
+
+        return $this;
     }
 }

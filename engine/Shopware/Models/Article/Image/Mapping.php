@@ -93,12 +93,17 @@ class Mapping extends ModelEntity
         return $this->image;
     }
 
+
     /**
      * @param  $image
+     *
+     * @return Mapping
      */
     public function setImage($image)
     {
         $this->image = $image;
+
+        return $this;
     }
 
     /**
@@ -109,11 +114,16 @@ class Mapping extends ModelEntity
         return $this->rules;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $rules
+     *
+     * @return Mapping
      */
     public function setRules($rules)
     {
         $this->setOneToMany($rules, '\Shopware\Models\Article\Image\Rule', 'rules', 'mapping');
+
+        return $this;
     }
 }
