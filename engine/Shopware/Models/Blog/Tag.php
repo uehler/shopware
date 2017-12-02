@@ -87,14 +87,19 @@ class Tag extends ModelEntity
         return $this->name;
     }
 
+
     /**
      * Sets the Name
      *
      * @param string $name
+     *
+     * @return Tag
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -105,11 +110,16 @@ class Tag extends ModelEntity
         return $this->blog;
     }
 
+
     /**
      * @param \Shopware\Models\Blog\Blog $blog
+     *
+     * @return Tag
      */
     public function setBlog($blog)
     {
         $this->blog = $blog;
+
+        return $this;
     }
 }

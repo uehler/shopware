@@ -220,14 +220,19 @@ class Blog extends ModelEntity
         return $this->title;
     }
 
+
     /**
      * Set Title
      *
      * @param string $title
+     *
+     * @return Blog
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
@@ -238,12 +243,17 @@ class Blog extends ModelEntity
         return $this->category;
     }
 
+
     /**
      * @param \Shopware\Models\Category\Category $category
+     *
+     * @return Blog
      */
     public function setCategory($category)
     {
         $this->category = $category;
+
+        return $this;
     }
 
     /**
@@ -256,14 +266,19 @@ class Blog extends ModelEntity
         return $this->active;
     }
 
+
     /**
      * Set Active
      *
      * @param bool $active
+     *
+     * @return Blog
      */
     public function setActive($active)
     {
         $this->active = $active;
+
+        return $this;
     }
 
     /**
@@ -276,14 +291,19 @@ class Blog extends ModelEntity
         return $this->shortDescription;
     }
 
+
     /**
      * Set ShortDescription
      *
      * @param string $shortDescription
+     *
+     * @return Blog
      */
     public function setShortDescription($shortDescription)
     {
         $this->shortDescription = $shortDescription;
+
+        return $this;
     }
 
     /**
@@ -296,14 +316,19 @@ class Blog extends ModelEntity
         return $this->description;
     }
 
+
     /**
      * Set Description
      *
      * @param string $description
+     *
+     * @return Blog
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
@@ -316,14 +341,19 @@ class Blog extends ModelEntity
         return $this->views;
     }
 
+
     /**
      * Set Views
      *
      * @param int $views
+     *
+     * @return Blog
      */
     public function setViews($views)
     {
         $this->views = $views;
+
+        return $this;
     }
 
     /**
@@ -336,10 +366,13 @@ class Blog extends ModelEntity
         return $this->displayDate;
     }
 
+
     /**
      * Set DisplayDate
      *
      * @param \DateTime|string $displayDate
+     *
+     * @return Blog
      */
     public function setDisplayDate($displayDate)
     {
@@ -347,6 +380,8 @@ class Blog extends ModelEntity
             $displayDate = new \DateTime($displayDate);
         }
         $this->displayDate = $displayDate;
+
+        return $this;
     }
 
     /**
@@ -359,14 +394,19 @@ class Blog extends ModelEntity
         return $this->categoryId;
     }
 
+
     /**
      * Set CategoryId
      *
      * @param int $categoryId
+     *
+     * @return Blog
      */
     public function setCategoryId($categoryId)
     {
         $this->categoryId = $categoryId;
+
+        return $this;
     }
 
     /**
@@ -379,14 +419,19 @@ class Blog extends ModelEntity
         return $this->tags;
     }
 
+
     /**
      * Set Tags
      *
      * @param ArrayCollection
+     *
+     * @return Blog
      */
     public function setTags($tags)
     {
         $this->tags = $tags;
+
+        return $this;
     }
 
     /**
@@ -399,14 +444,19 @@ class Blog extends ModelEntity
         return $this->template;
     }
 
+
     /**
      * Set Template
      *
      * @param string $template
+     *
+     * @return Blog
      */
     public function setTemplate($template)
     {
         $this->template = $template;
+
+        return $this;
     }
 
     /**
@@ -441,14 +491,19 @@ class Blog extends ModelEntity
         return $this->assignedArticles;
     }
 
+
     /**
      * Set the assigned articles
      *
      * @param \Doctrine\Common\Collections\ArrayCollection $assignedArticles
+     *
+     * @return Blog
      */
     public function setAssignedArticles($assignedArticles)
     {
         $this->assignedArticles = $assignedArticles;
+
+        return $this;
     }
 
     /**
@@ -461,14 +516,19 @@ class Blog extends ModelEntity
         return $this->metaKeyWords;
     }
 
+
     /**
      * Get the metaKeyWords
      *
      * @param string $metaKeyWords
+     *
+     * @return Blog
      */
     public function setMetaKeyWords($metaKeyWords)
     {
         $this->metaKeyWords = $metaKeyWords;
+
+        return $this;
     }
 
     /**
@@ -481,14 +541,19 @@ class Blog extends ModelEntity
         return $this->metaDescription;
     }
 
+
     /**
      * Set the metaDescription
      *
      * @param string $metaDescription
+     *
+     * @return Blog
      */
     public function setMetaDescription($metaDescription)
     {
         $this->metaDescription = $metaDescription;
+
+        return $this;
     }
 
     /**
@@ -541,24 +606,34 @@ class Blog extends ModelEntity
         return $this->author;
     }
 
+
     /**
      * sets the author
      *
      * @param $author
+     *
+     * @return Blog
      */
     public function setAuthor($author)
     {
         $this->author = $author;
+
+        return $this;
     }
+
 
     /**
      * set the metaTitle
      *
      * @param string $metaTitle
+     *
+     * @return Blog
      */
     public function setMetaTitle($metaTitle)
     {
         $this->metaTitle = $metaTitle;
+
+        return $this;
     }
 
     /**

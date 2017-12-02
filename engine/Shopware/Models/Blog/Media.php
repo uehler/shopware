@@ -97,14 +97,19 @@ class Media extends ModelEntity
         return $this->preview;
     }
 
+
     /**
      * Set Preview
      *
      * @param int $preview
+     *
+     * @return Media
      */
     public function setPreview($preview)
     {
         $this->preview = $preview;
+
+        return $this;
     }
 
     /**
@@ -117,14 +122,19 @@ class Media extends ModelEntity
         return $this->blog;
     }
 
+
     /**
      * Set Blog
      *
      * @param \Shopware\Models\Blog\Blog $blog
+     *
+     * @return Media
      */
     public function setBlog($blog)
     {
         $this->blog = $blog;
+
+        return $this;
     }
 
     /**
@@ -135,11 +145,16 @@ class Media extends ModelEntity
         return $this->media;
     }
 
+
     /**
      * @param \Shopware\Models\Blog\Media $media
+     *
+     * @return Media
      */
     public function setMedia($media)
     {
         $this->media = $media;
+
+        return $this;
     }
 }

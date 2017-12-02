@@ -118,14 +118,19 @@ class Comment extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * Set Active
      *
      * @param bool $active
+     *
+     * @return Comment
      */
     public function setActive($active)
     {
         $this->active = $active;
+
+        return $this;
     }
 
     /**
@@ -138,14 +143,19 @@ class Comment extends ModelEntity
         return $this->active;
     }
 
+
     /**
      * Set comment
      *
      * @param string $comment
+     *
+     * @return Comment
      */
     public function setComment($comment)
     {
         $this->comment = $comment;
+
+        return $this;
     }
 
     /**
@@ -158,10 +168,13 @@ class Comment extends ModelEntity
         return $this->comment;
     }
 
+
     /**
      * Set creationDate
      *
      * @param \DateTime|string $creationDate
+     *
+     * @return Comment
      */
     public function setCreationDate($creationDate)
     {
@@ -169,6 +182,8 @@ class Comment extends ModelEntity
             $creationDate = new \DateTime($creationDate);
         }
         $this->creationDate = $creationDate;
+
+        return $this;
     }
 
     /**
@@ -181,14 +196,19 @@ class Comment extends ModelEntity
         return $this->creationDate;
     }
 
+
     /**
      * Set eMail
      *
      * @param string $email
+     *
+     * @return Comment
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
+        return $this;
     }
 
     /**
@@ -201,14 +221,19 @@ class Comment extends ModelEntity
         return $this->email;
     }
 
+
     /**
      * Set headline
      *
      * @param string $headline
+     *
+     * @return Comment
      */
     public function setHeadline($headline)
     {
         $this->headline = $headline;
+
+        return $this;
     }
 
     /**
@@ -221,14 +246,19 @@ class Comment extends ModelEntity
         return $this->headline;
     }
 
+
     /**
      * Set name
      *
      * @param string $name
+     *
+     * @return Comment
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -241,14 +271,19 @@ class Comment extends ModelEntity
         return $this->name;
     }
 
+
     /**
      * Set blog
      *
      * @param \Shopware\Models\Blog\Blog $blog
+     *
+     * @return Comment
      */
     public function setBlog($blog)
     {
         $this->blog = $blog;
+
+        return $this;
     }
 
     /**
@@ -271,13 +306,18 @@ class Comment extends ModelEntity
         return $this->points;
     }
 
+
     /**
      * Set points
      *
      * @param \Shopware\Models\Blog\double $points
+     *
+     * @return Comment
      */
     public function setPoints($points)
     {
         $this->points = $points;
+
+        return $this;
     }
 }
