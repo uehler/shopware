@@ -246,14 +246,19 @@ class Address extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * Setter function for the company column property
      *
      * @param string $company
+     *
+     * @return Address
      */
     public function setCompany($company)
     {
         $this->company = $this->cleanup($company);
+
+        return $this;
     }
 
     /**
@@ -266,14 +271,19 @@ class Address extends ModelEntity
         return $this->company;
     }
 
+
     /**
      * Setter function for the department column property.
      *
      * @param string $department
+     *
+     * @return Address
      */
     public function setDepartment($department)
     {
         $this->department = $this->cleanup($department);
+
+        return $this;
     }
 
     /**
@@ -286,14 +296,19 @@ class Address extends ModelEntity
         return $this->department;
     }
 
+
     /**
      * Setter function for the salutation column property.
      *
      * @param string $salutation
+     *
+     * @return Address
      */
     public function setSalutation($salutation)
     {
         $this->salutation = $this->cleanup($salutation);
+
+        return $this;
     }
 
     /**
@@ -306,14 +321,19 @@ class Address extends ModelEntity
         return $this->salutation;
     }
 
+
     /**
      * Setter function for the firstname column property.
      *
      * @param string $firstname
+     *
+     * @return Address
      */
     public function setFirstname($firstname)
     {
         $this->firstname = $this->cleanup($firstname);
+
+        return $this;
     }
 
     /**
@@ -326,14 +346,19 @@ class Address extends ModelEntity
         return $this->firstname;
     }
 
+
     /**
      * Setter function for the lastname column property.
      *
      * @param string $lastname
+     *
+     * @return Address
      */
     public function setLastname($lastname)
     {
         $this->lastname = $lastname;
+
+        return $this;
     }
 
     /**
@@ -346,14 +371,19 @@ class Address extends ModelEntity
         return $this->lastname;
     }
 
+
     /**
      * Setter function for the street column property.
      *
      * @param string $street
+     *
+     * @return Address
      */
     public function setStreet($street)
     {
         $this->street = $street;
+
+        return $this;
     }
 
     /**
@@ -366,14 +396,19 @@ class Address extends ModelEntity
         return $this->street;
     }
 
+
     /**
      * Setter function for the zipcode column property.
      *
      * @param string $zipcode
+     *
+     * @return Address
      */
     public function setZipcode($zipcode)
     {
         $this->zipcode = $this->cleanup($zipcode);
+
+        return $this;
     }
 
     /**
@@ -386,14 +421,19 @@ class Address extends ModelEntity
         return $this->zipcode;
     }
 
+
     /**
      * Setter function for the city column property.
      *
      * @param string $city
+     *
+     * @return Address
      */
     public function setCity($city)
     {
         $this->city = $this->cleanup($city);
+
+        return $this;
     }
 
     /**
@@ -406,14 +446,19 @@ class Address extends ModelEntity
         return $this->city;
     }
 
+
     /**
      * Setter function for the phone column property.
      *
      * @param string $phone
+     *
+     * @return Address
      */
     public function setPhone($phone)
     {
         $this->phone = $this->cleanup($phone);
+
+        return $this;
     }
 
     /**
@@ -426,15 +471,20 @@ class Address extends ModelEntity
         return $this->phone;
     }
 
+
     /**
      * Setter function for the vatId column property.
      * The vatId will be saved in the ustId table field.
      *
      * @param string $vatId
+     *
+     * @return Address
      */
     public function setVatId($vatId)
     {
         $this->vatId = $this->cleanup($vatId);
+
+        return $this;
     }
 
     /**
@@ -474,22 +524,32 @@ class Address extends ModelEntity
         return $this->customer;
     }
 
+
     /**
      * @param Customer $customer
+     *
+     * @return Address
      */
     public function setCustomer(Customer $customer)
     {
         $this->customer = $customer;
+
+        return $this;
     }
+
 
     /**
      * Setter function for the setAdditionalAddressLine1 column property.
      *
      * @param string $additionalAddressLine1
+     *
+     * @return Address
      */
     public function setAdditionalAddressLine1($additionalAddressLine1)
     {
         $this->additionalAddressLine1 = $this->cleanup($additionalAddressLine1);
+
+        return $this;
     }
 
     /**
@@ -502,14 +562,19 @@ class Address extends ModelEntity
         return $this->additionalAddressLine1;
     }
 
+
     /**
      * Setter function for the setAdditionalAddressLine2 column property.
      *
      * @param string $additionalAddressLine2
+     *
+     * @return Address
      */
     public function setAdditionalAddressLine2($additionalAddressLine2)
     {
         $this->additionalAddressLine2 = $this->cleanup($additionalAddressLine2);
+
+        return $this;
     }
 
     /**
@@ -530,12 +595,17 @@ class Address extends ModelEntity
         return $this->country;
     }
 
+
     /**
      * @param Country $country
+     *
+     * @return Address
      */
     public function setCountry(Country $country)
     {
         $this->country = $country;
+
+        return $this;
     }
 
     /**
@@ -546,12 +616,17 @@ class Address extends ModelEntity
         return $this->state;
     }
 
+
     /**
      * @param State|null $state
+     *
+     * @return Address
      */
     public function setState(State $state = null)
     {
         $this->state = $state;
+
+        return $this;
     }
 
     /**
@@ -562,12 +637,17 @@ class Address extends ModelEntity
         return $this->additional;
     }
 
+
     /**
      * @param array $additional
+     *
+     * @return Address
      */
     public function setAdditional($additional)
     {
         $this->additional = $additional;
+
+        return $this;
     }
 
     /**
@@ -578,11 +658,16 @@ class Address extends ModelEntity
         return $this->title;
     }
 
+
     /**
      * @param string $title
+     *
+     * @return Address
      */
     public function setTitle($title)
     {
         $this->title = $this->cleanup($title);
+
+        return $this;
     }
 }

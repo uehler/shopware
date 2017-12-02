@@ -139,12 +139,17 @@ class PaymentData extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param string $bankName
+     *
+     * @return PaymentData
      */
     public function setBankName($bankName)
     {
         $this->bankName = $bankName;
+
+        return $this;
     }
 
     /**
@@ -155,12 +160,17 @@ class PaymentData extends ModelEntity
         return $this->bankName;
     }
 
+
     /**
      * @param string $bic
+     *
+     * @return PaymentData
      */
     public function setBic($bic)
     {
         $this->bic = $bic;
+
+        return $this;
     }
 
     /**
@@ -171,12 +181,17 @@ class PaymentData extends ModelEntity
         return $this->bic;
     }
 
+
     /**
      * @param \DateTime $createdAt
+     *
+     * @return PaymentData
      */
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+
+        return $this;
     }
 
     /**
@@ -187,12 +202,17 @@ class PaymentData extends ModelEntity
         return $this->createdAt;
     }
 
+
     /**
      * @param mixed $customer
+     *
+     * @return PaymentData
      */
     public function setCustomer($customer)
     {
         $this->customer = $customer;
+
+        return $this;
     }
 
     /**
@@ -203,12 +223,17 @@ class PaymentData extends ModelEntity
         return $this->customer;
     }
 
+
     /**
      * @param string $iban
+     *
+     * @return PaymentData
      */
     public function setIban($iban)
     {
         $this->iban = $iban;
+
+        return $this;
     }
 
     /**
@@ -219,12 +244,17 @@ class PaymentData extends ModelEntity
         return $this->iban;
     }
 
+
     /**
      * @param mixed $paymentMean
+     *
+     * @return PaymentData
      */
     public function setPaymentMean($paymentMean)
     {
         $this->paymentMean = $paymentMean;
+
+        return $this;
     }
 
     /**
@@ -235,12 +265,17 @@ class PaymentData extends ModelEntity
         return $this->paymentMean;
     }
 
+
     /**
      * @param bool $useBillingData
+     *
+     * @return PaymentData
      */
     public function setUseBillingData($useBillingData)
     {
         $this->useBillingData = $useBillingData;
+
+        return $this;
     }
 
     /**
@@ -251,12 +286,17 @@ class PaymentData extends ModelEntity
         return $this->useBillingData;
     }
 
+
     /**
      * @param string $accountHolder
+     *
+     * @return PaymentData
      */
     public function setAccountHolder($accountHolder)
     {
         $this->accountHolder = $accountHolder;
+
+        return $this;
     }
 
     /**
@@ -267,12 +307,17 @@ class PaymentData extends ModelEntity
         return $this->accountHolder;
     }
 
+
     /**
      * @param string $accountNumber
+     *
+     * @return PaymentData
      */
     public function setAccountNumber($accountNumber)
     {
         $this->accountNumber = $accountNumber;
+
+        return $this;
     }
 
     /**
@@ -283,12 +328,17 @@ class PaymentData extends ModelEntity
         return $this->accountNumber;
     }
 
+
     /**
      * @param string $bankCode
+     *
+     * @return PaymentData
      */
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+
+        return $this;
     }
 
     /**

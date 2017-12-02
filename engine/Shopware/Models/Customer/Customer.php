@@ -505,17 +505,22 @@ class Customer extends LazyFetchModelEntity
         return $this->hashPassword;
     }
 
+
     /**
      * Setter method for the rawPassword column property which used for the customer login.
      * This propertie will not be hashed!
      *
      * @param string $rawPassword
+     *
+     * @return Customer
      */
     public function setRawPassword($rawPassword)
     {
         // Force hashPassword to change with the rawPassword
         $this->hashPassword = null;
         $this->rawPassword = $rawPassword;
+
+        return $this;
     }
 
     /**
@@ -1128,12 +1133,17 @@ class Customer extends LazyFetchModelEntity
         return $this->paymentId;
     }
 
+
     /**
      * @param int $paymentId
+     *
+     * @return Customer
      */
     public function setPaymentId($paymentId)
     {
         $this->paymentId = $paymentId;
+
+        return $this;
     }
 
     /**
@@ -1144,12 +1154,17 @@ class Customer extends LazyFetchModelEntity
         return $this->priceGroup;
     }
 
+
     /**
      * @param \Shopware\Models\Customer\PriceGroup $priceGroup
+     *
+     * @return Customer
      */
     public function setPriceGroup($priceGroup)
     {
         $this->priceGroup = $priceGroup;
+
+        return $this;
     }
 
     public function setLanguageSubShop(\Shopware\Models\Shop\Shop $languageSubShop)
@@ -1158,6 +1173,8 @@ class Customer extends LazyFetchModelEntity
 
         $subShop = ($languageSubShop->getMain()) ? $languageSubShop->getMain() : $languageSubShop;
         $this->setShop($subShop);
+
+        return $this;
     }
 
     public function getLanguageSubShop()
@@ -1173,12 +1190,17 @@ class Customer extends LazyFetchModelEntity
         return $this->languageId;
     }
 
+
     /**
      * @param ArrayCollection $paymentInstances
+     *
+     * @return Customer
      */
     public function setPaymentInstances($paymentInstances)
     {
         $this->paymentInstances = $paymentInstances;
+
+        return $this;
     }
 
     /**
@@ -1189,12 +1211,17 @@ class Customer extends LazyFetchModelEntity
         return $this->paymentInstances;
     }
 
+
     /**
      * @param ArrayCollection $paymentData
+     *
+     * @return Customer
      */
     public function setPaymentData($paymentData)
     {
         $this->paymentData = $paymentData;
+
+        return $this;
     }
 
     /**
@@ -1231,12 +1258,17 @@ class Customer extends LazyFetchModelEntity
         return $this->defaultBillingAddress;
     }
 
+
     /**
      * @param Address $defaultBillingAddress
+     *
+     * @return Customer
      */
     public function setDefaultBillingAddress(Address $defaultBillingAddress)
     {
         $this->defaultBillingAddress = $defaultBillingAddress;
+
+        return $this;
     }
 
     /**
@@ -1247,12 +1279,17 @@ class Customer extends LazyFetchModelEntity
         return $this->defaultShippingAddress;
     }
 
+
     /**
      * @param Address $defaultShippingAddress
+     *
+     * @return Customer
      */
     public function setDefaultShippingAddress(Address $defaultShippingAddress)
     {
         $this->defaultShippingAddress = $defaultShippingAddress;
+
+        return $this;
     }
 
     /**
@@ -1263,12 +1300,17 @@ class Customer extends LazyFetchModelEntity
         return $this->salutation;
     }
 
+
     /**
      * @param string $salutation
+     *
+     * @return Customer
      */
     public function setSalutation($salutation)
     {
         $this->salutation = $this->cleanup($salutation);
+
+        return $this;
     }
 
     /**
@@ -1279,12 +1321,17 @@ class Customer extends LazyFetchModelEntity
         return $this->title;
     }
 
+
     /**
      * @param string $title
+     *
+     * @return Customer
      */
     public function setTitle($title)
     {
         $this->title = $this->cleanup($title);
+
+        return $this;
     }
 
     /**
@@ -1295,12 +1342,17 @@ class Customer extends LazyFetchModelEntity
         return $this->firstname;
     }
 
+
     /**
      * @param string $firstname
+     *
+     * @return Customer
      */
     public function setFirstname($firstname)
     {
         $this->firstname = $this->cleanup($firstname);
+
+        return $this;
     }
 
     /**
@@ -1311,12 +1363,17 @@ class Customer extends LazyFetchModelEntity
         return $this->lastname;
     }
 
+
     /**
      * @param string $lastname
+     *
+     * @return Customer
      */
     public function setLastname($lastname)
     {
         $this->lastname = $this->cleanup($lastname);
+
+        return $this;
     }
 
     /**
@@ -1327,8 +1384,11 @@ class Customer extends LazyFetchModelEntity
         return $this->birthday;
     }
 
+
     /**
      * @param \DateTime|string $birthday
+     *
+     * @return Customer
      */
     public function setBirthday($birthday = null)
     {
@@ -1337,6 +1397,8 @@ class Customer extends LazyFetchModelEntity
         }
 
         $this->birthday = $birthday;
+
+        return $this;
     }
 
     /**
@@ -1347,12 +1409,17 @@ class Customer extends LazyFetchModelEntity
         return $this->encoderName;
     }
 
+
     /**
      * @param string $encoderName
+     *
+     * @return Customer
      */
     public function setEncoderName($encoderName)
     {
         $this->encoderName = $encoderName;
+
+        return $this;
     }
 
     /**
@@ -1363,12 +1430,17 @@ class Customer extends LazyFetchModelEntity
         return $this->number;
     }
 
+
     /**
      * @param string $number
+     *
+     * @return Customer
      */
     public function setNumber($number)
     {
         $this->number = $number;
+
+        return $this;
     }
 
     /**
@@ -1379,12 +1451,17 @@ class Customer extends LazyFetchModelEntity
         return $this->customerType;
     }
 
+
     /**
      * @param string $customerType
+     *
+     * @return Customer
      */
     public function setCustomerType($customerType)
     {
         $this->customerType = $customerType;
+
+        return $this;
     }
 
     /**
@@ -1395,11 +1472,16 @@ class Customer extends LazyFetchModelEntity
         return $this->additional;
     }
 
+
     /**
      * @param array $additional
+     *
+     * @return Customer
      */
     public function setAdditional($additional)
     {
         $this->additional = $additional;
+
+        return $this;
     }
 }

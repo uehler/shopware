@@ -539,12 +539,17 @@ class Billing extends ModelEntity
         return $this;
     }
 
+
     /**
      * @param int $stateId
+     *
+     * @return Billing
      */
     public function setStateId($stateId)
     {
         $this->stateId = $stateId;
+
+        return $this;
     }
 
     /**
@@ -555,14 +560,19 @@ class Billing extends ModelEntity
         return $this->stateId;
     }
 
+
     /**
      * Setter function for the setAdditionalAddressLine2 column property.
      *
      * @param string $additionalAddressLine2
+     *
+     * @return Billing
      */
     public function setAdditionalAddressLine2($additionalAddressLine2)
     {
         $this->additionalAddressLine2 = $this->cleanup($additionalAddressLine2);
+
+        return $this;
     }
 
     /**
@@ -575,14 +585,19 @@ class Billing extends ModelEntity
         return $this->additionalAddressLine2;
     }
 
+
     /**
      * Setter function for the setAdditionalAddressLine1 column property.
      *
      * @param string $additionalAddressLine1
+     *
+     * @return Billing
      */
     public function setAdditionalAddressLine1($additionalAddressLine1)
     {
         $this->additionalAddressLine1 = $this->cleanup($additionalAddressLine1);
+
+        return $this;
     }
 
     /**
@@ -634,11 +649,16 @@ class Billing extends ModelEntity
         return $this->title;
     }
 
+
     /**
      * @param string $title
+     *
+     * @return Billing
      */
     public function setTitle($title)
     {
         $this->title = $this->cleanup($title);
+
+        return $this;
     }
 }

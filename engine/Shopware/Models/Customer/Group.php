@@ -402,6 +402,8 @@ class Group extends ModelEntity
     public function setDiscounts($discounts)
     {
         $this->discounts = $discounts;
+
+        return $this;
     }
 
     /**

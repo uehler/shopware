@@ -436,6 +436,7 @@ class Shipping extends ModelEntity
         return $this->customer;
     }
 
+
     /**
      * Setter function for the customer association property which contains an instance of the Shopware\Models\Customer\Customer model which
      * contains all data about the customer. The association is defined over
@@ -443,10 +444,14 @@ class Shipping extends ModelEntity
      * The customer data is joined over the s_user.id field.
      *
      * @param \Shopware\Models\Customer\Customer $customer
+     *
+     * @return Shipping
      */
     public function setCustomer($customer)
     {
         $this->customer = $customer;
+
+        return $this;
     }
 
     /**
@@ -467,12 +472,17 @@ class Shipping extends ModelEntity
         return $this->setOneToOne($attribute, '\Shopware\Models\Attribute\CustomerShipping', 'attribute', 'customerShipping');
     }
 
+
     /**
      * @param int $stateId
+     *
+     * @return Shipping
      */
     public function setStateId($stateId)
     {
         $this->stateId = $stateId;
+
+        return $this;
     }
 
     /**
@@ -483,14 +493,19 @@ class Shipping extends ModelEntity
         return $this->stateId;
     }
 
+
     /**
      * Setter function for the setAdditionalAddressLine2 column property.
      *
      * @param string $additionalAddressLine2
+     *
+     * @return Shipping
      */
     public function setAdditionalAddressLine2($additionalAddressLine2)
     {
         $this->additionalAddressLine2 = $this->cleanup($additionalAddressLine2);
+
+        return $this;
     }
 
     /**
@@ -503,14 +518,19 @@ class Shipping extends ModelEntity
         return $this->additionalAddressLine2;
     }
 
+
     /**
      * Setter function for the setAdditionalAddressLine1 column property.
      *
      * @param string $additionalAddressLine1
+     *
+     * @return Shipping
      */
     public function setAdditionalAddressLine1($additionalAddressLine1)
     {
         $this->additionalAddressLine1 = $this->cleanup($additionalAddressLine1);
+
+        return $this;
     }
 
     /**
@@ -561,11 +581,16 @@ class Shipping extends ModelEntity
         return $this->title;
     }
 
+
     /**
      * @param string $title
+     *
+     * @return Shipping
      */
     public function setTitle($title)
     {
         $this->title = $this->cleanup($title);
+
+        return $this;
     }
 }

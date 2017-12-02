@@ -149,6 +149,7 @@ class PriceGroup extends ModelEntity
         return $this->customers;
     }
 
+
     /**
      * Setter function for the customers property which contains an array collection with many instances of Shopware\Models\Customer\Customer models which
      * contains all data about the customer. The association is defined over
@@ -156,10 +157,14 @@ class PriceGroup extends ModelEntity
      * The customer data is joined over the s_user.groupkey field.
      *
      * @param $customers \Doctrine\Common\Collections\ArrayCollection
+     *
+     * @return PriceGroup
      */
     public function setCustomers($customers)
     {
         $this->customers = $customers;
+
+        return $this;
     }
 
     /**
