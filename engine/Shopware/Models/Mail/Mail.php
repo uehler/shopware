@@ -601,11 +601,16 @@ class Mail extends ModelEntity
         return $this->dirty;
     }
 
+
     /**
      * @param bool $dirty
+     *
+     * @return Mail
      */
     public function setDirty($dirty)
     {
         $this->dirty = $dirty;
+
+        return $this;
     }
 }

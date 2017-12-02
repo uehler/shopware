@@ -115,11 +115,16 @@ class Attachment extends File
         return null;
     }
 
+
     /**
      * @param \Shopware\Models\Shop\Shop $shop
+     *
+     * @return Attachment
      */
     public function setShop(\Shopware\Models\Shop\Shop $shop)
     {
         $this->shop = $shop;
+
+        return $this;
     }
 }
