@@ -428,12 +428,17 @@ class Form extends ModelEntity
         return $this->isocode;
     }
 
+
     /**
      * @param string $metaTitle
+     *
+     * @return Form
      */
     public function setMetaTitle($metaTitle)
     {
         $this->metaTitle = $metaTitle;
+
+        return $this;
     }
 
     /**
@@ -444,12 +449,17 @@ class Form extends ModelEntity
         return $this->metaTitle;
     }
 
+
     /**
      * @param string $metaDescription
+     *
+     * @return Form
      */
     public function setMetaDescription($metaDescription)
     {
         $this->metaDescription = $metaDescription;
+
+        return $this;
     }
 
     /**
@@ -460,12 +470,17 @@ class Form extends ModelEntity
         return $this->metaDescription;
     }
 
+
     /**
      * @param string $metaKeywords
+     *
+     * @return Form
      */
     public function setMetaKeywords($metaKeywords)
     {
         $this->metaKeywords = $metaKeywords;
+
+        return $this;
     }
 
     /**
@@ -504,11 +519,16 @@ class Form extends ModelEntity
         return $this->shopIds;
     }
 
+
     /**
      * @param string $shopIds
+     *
+     * @return Form
      */
     public function setShopIds($shopIds)
     {
         $this->shopIds = $shopIds;
+
+        return $this;
     }
 }
