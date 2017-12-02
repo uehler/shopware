@@ -916,12 +916,17 @@ class Media extends ModelEntity
         return $this->properties;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $properties
+     *
+     * @return Media
      */
     public function setProperties($properties)
     {
         $this->properties = $properties;
+
+        return $this;
     }
 
     /**
@@ -932,12 +937,17 @@ class Media extends ModelEntity
         return $this->width;
     }
 
+
     /**
      * @param int $width
+     *
+     * @return Media
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
+        return $this;
     }
 
     /**
@@ -948,12 +958,17 @@ class Media extends ModelEntity
         return $this->height;
     }
 
+
     /**
      * @param int $height
+     *
+     * @return Media
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
+        return $this;
     }
 
     public function getDefaultThumbnails()
@@ -964,6 +979,8 @@ class Media extends ModelEntity
     public function setDefaultThumbnails($defaultThumbnails)
     {
         $this->defaultThumbnails = $defaultThumbnails;
+
+        return $this;
     }
 
     /**
@@ -992,12 +1009,17 @@ class Media extends ModelEntity
         return $this->articles;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $articles
+     *
+     * @return Media
      */
     public function setArticles($articles)
     {
         $this->articles = $articles;
+
+        return $this;
     }
 
     public function removeThumbnails()

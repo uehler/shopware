@@ -263,14 +263,19 @@ class Album extends ModelEntity
         return $this->media;
     }
 
+
     /**
      * Sets the associated media
      *
      * @param $media
+     *
+     * @return Album
      */
     public function setMedia($media)
     {
         $this->media = $media;
+
+        return $this;
     }
 
     /**

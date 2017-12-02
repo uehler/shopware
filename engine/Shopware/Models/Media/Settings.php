@@ -235,12 +235,17 @@ class Settings extends ModelEntity
         return $this->album;
     }
 
+
     /**
      * @param  $album
+     *
+     * @return Settings
      */
     public function setAlbum($album)
     {
         $this->album = $album;
+
+        return $this;
     }
 
     /**
@@ -251,12 +256,17 @@ class Settings extends ModelEntity
         return $this->thumbnailHighDpiQuality;
     }
 
+
     /**
      * @param int $thumbnailHighDpiQuality
+     *
+     * @return Settings
      */
     public function setThumbnailHighDpiQuality($thumbnailHighDpiQuality)
     {
         $this->thumbnailHighDpiQuality = $thumbnailHighDpiQuality;
+
+        return $this;
     }
 
     /**
@@ -267,12 +277,17 @@ class Settings extends ModelEntity
         return $this->thumbnailHighDpi;
     }
 
+
     /**
      * @param bool $thumbnailHighDpi
+     *
+     * @return Settings
      */
     public function setThumbnailHighDpi($thumbnailHighDpi)
     {
         $this->thumbnailHighDpi = $thumbnailHighDpi;
+
+        return $this;
     }
 
     /**
@@ -283,11 +298,16 @@ class Settings extends ModelEntity
         return $this->thumbnailQuality;
     }
 
+
     /**
      * @param int $thumbnailQuality
+     *
+     * @return Settings
      */
     public function setThumbnailQuality($thumbnailQuality)
     {
         $this->thumbnailQuality = $thumbnailQuality;
+
+        return $this;
     }
 }
