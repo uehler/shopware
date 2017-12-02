@@ -95,7 +95,7 @@ class FormTranslation extends ModelEntity
     /**
      * @param $label
      *
-     * @return Form
+     * @return FormTranslation
      */
     public function setLabel($label)
     {
@@ -136,12 +136,17 @@ class FormTranslation extends ModelEntity
         return $this->description;
     }
 
+
     /**
      * @param \Shopware\Models\Shop\Locale $locale
+     *
+     * @return FormTranslation
      */
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
+        return $this;
     }
 
     /**
@@ -152,12 +157,17 @@ class FormTranslation extends ModelEntity
         return $this->locale;
     }
 
+
     /**
      * @param \Shopware\Models\Config\Form $form
+     *
+     * @return FormTranslation
      */
     public function setForm($form)
     {
         $this->form = $form;
+
+        return $this;
     }
 
     /**

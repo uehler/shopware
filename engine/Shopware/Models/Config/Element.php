@@ -244,12 +244,17 @@ class Element extends ModelEntity
         return $this->label;
     }
 
+
     /**
      * @param \Shopware\Models\Config\Form $form
+     *
+     * @return Element
      */
     public function setForm($form)
     {
         $this->form = $form;
+
+        return $this;
     }
 
     /**
@@ -260,8 +265,11 @@ class Element extends ModelEntity
         return $this->form;
     }
 
+
     /**
      * @param array $options
+     *
+     * @return Element
      */
     public function setOptions(array $options)
     {
@@ -275,6 +283,8 @@ class Element extends ModelEntity
         }
 
         $this->options = $options;
+
+        return $this;
     }
 
     /**
@@ -393,12 +403,17 @@ class Element extends ModelEntity
         return $this->translations;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $translations
+     *
+     * @return Element
      */
     public function setTranslations($translations)
     {
         $this->translations = $translations;
+
+        return $this;
     }
 
     /**

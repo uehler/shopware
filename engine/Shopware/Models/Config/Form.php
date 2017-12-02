@@ -209,12 +209,17 @@ class Form extends ModelEntity
         return $this->position;
     }
 
+
     /**
      * @param int $position
+     *
+     * @return Form
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -322,12 +327,17 @@ class Form extends ModelEntity
         return $this;
     }
 
+
     /**
      * @param int $pluginId
+     *
+     * @return Form
      */
     public function setPluginId($pluginId)
     {
         $this->pluginId = $pluginId;
+
+        return $this;
     }
 
     /**
@@ -346,12 +356,17 @@ class Form extends ModelEntity
         return $this->parent;
     }
 
+
     /**
      * @param Form $parent
+     *
+     * @return Form
      */
     public function setParent($parent)
     {
         $this->parent = $parent;
+
+        return $this;
     }
 
     /**
@@ -362,12 +377,17 @@ class Form extends ModelEntity
         return $this->children;
     }
 
+
     /**
      * @param ArrayCollection $children
+     *
+     * @return Form
      */
     public function setChildren($children)
     {
         $this->children = $children;
+
+        return $this;
     }
 
     /**

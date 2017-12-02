@@ -153,7 +153,7 @@ class ElementTranslation extends ModelEntity
      *
      * @param \Shopware\Models\Config\Element $element
      *
-     * @return Element
+     * @return ElementTranslation
      */
     public function setElement($element)
     {
@@ -162,12 +162,17 @@ class ElementTranslation extends ModelEntity
         return $this;
     }
 
+
     /**
      * @param \Shopware\Models\Shop\Locale $locale
+     *
+     * @return ElementTranslation
      */
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
+        return $this;
     }
 
     /**
