@@ -149,12 +149,17 @@ class Container extends ModelEntity
         $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+
     /**
      * @param string $description
+     *
+     * @return Container
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
@@ -165,12 +170,17 @@ class Container extends ModelEntity
         return $this->description;
     }
 
+
     /**
      * @param int $position
+     *
+     * @return Container
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -181,12 +191,17 @@ class Container extends ModelEntity
         return $this->position;
     }
 
+
     /**
      * @param string $type
+     *
+     * @return Container
      */
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
     }
 
     /**
@@ -197,13 +212,17 @@ class Container extends ModelEntity
         return $this->type;
     }
 
+
     /**
      * @param \Shopware\Models\Newsletter\Newsletter $newsletter
+     *
+     * @return Container
      */
     public function setNewsletter($newsletter)
     {
         $this->newsletter = $newsletter;
-//        $this->setManyToOne($newsletter, '\Shopware\Models\Newsletter\Newsletter', 'newsletter');
+
+        return $this;
     }
 
     /**
@@ -214,12 +233,17 @@ class Container extends ModelEntity
         return $this->newsletter;
     }
 
+
     /**
      * @param string $value
+     *
+     * @return Container
      */
     public function setValue($value)
     {
         $this->value = $value;
+
+        return $this;
     }
 
     /**

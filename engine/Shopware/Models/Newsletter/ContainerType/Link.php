@@ -99,12 +99,17 @@ class Link extends ModelEntity
      */
     private $position;
 
+
     /**
      * @param string $description
+     *
+     * @return Link
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
@@ -115,12 +120,17 @@ class Link extends ModelEntity
         return $this->description;
     }
 
+
     /**
      * @param string $link
+     *
+     * @return Link
      */
     public function setLink($link)
     {
         $this->link = $link;
+
+        return $this;
     }
 
     /**
@@ -131,12 +141,17 @@ class Link extends ModelEntity
         return $this->link;
     }
 
+
     /**
      * @param int $position
+     *
+     * @return Link
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -147,12 +162,17 @@ class Link extends ModelEntity
         return $this->position;
     }
 
+
     /**
      * @param string $target
+     *
+     * @return Link
      */
     public function setTarget($target)
     {
         $this->target = $target;
+
+        return $this;
     }
 
     /**
@@ -163,16 +183,18 @@ class Link extends ModelEntity
         return $this->target;
     }
 
+
     /**
      * @param \Shopware\Models\Newsletter\Container $container
      *
-     * @return \Shopware\Models\Newsletter\Container
+     * @return Link
      */
     public function setContainer($container)
     {
         $this->container = $container;
         $container->setType('ctLinks');
-//        return $this->setOneToOne($container, '\Shopware\Models\Newsletter\Container', 'container', 'text');
+
+        return $this;
     }
 
     /**

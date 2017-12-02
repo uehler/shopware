@@ -63,12 +63,17 @@ class Group extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param string $name
+     *
+     * @return Group
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**

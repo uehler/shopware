@@ -64,12 +64,17 @@ class Sender extends ModelEntity
      */
     private $name;
 
+
     /**
      * @param string $email
+     *
+     * @return Sender
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
+        return $this;
     }
 
     /**
@@ -80,12 +85,17 @@ class Sender extends ModelEntity
         return $this->email;
     }
 
+
     /**
      * @param string $name
+     *
+     * @return Sender
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**

@@ -125,12 +125,17 @@ class ContactData extends ModelEntity
      */
     private $id;
 
+
     /**
      * @param \DateTime $added
+     *
+     * @return ContactData
      */
     public function setAdded($added)
     {
         $this->added = $added;
+
+        return $this;
     }
 
     /**
@@ -141,12 +146,17 @@ class ContactData extends ModelEntity
         return $this->added;
     }
 
+
     /**
      * @param string $city
+     *
+     * @return ContactData
      */
     public function setCity($city)
     {
         $this->city = $city;
+
+        return $this;
     }
 
     /**
@@ -157,12 +167,17 @@ class ContactData extends ModelEntity
         return $this->city;
     }
 
+
     /**
      * @param \DateTime $deleted
+     *
+     * @return ContactData
      */
     public function setDeleted($deleted)
     {
         $this->deleted = $deleted;
+
+        return $this;
     }
 
     /**
@@ -173,12 +188,17 @@ class ContactData extends ModelEntity
         return $this->deleted;
     }
 
+
     /**
      * @param string $email
+     *
+     * @return ContactData
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
+        return $this;
     }
 
     /**
@@ -189,12 +209,17 @@ class ContactData extends ModelEntity
         return $this->email;
     }
 
+
     /**
      * @param string $firstName
+     *
+     * @return ContactData
      */
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
+        return $this;
     }
 
     /**
@@ -205,12 +230,17 @@ class ContactData extends ModelEntity
         return $this->firstName;
     }
 
+
     /**
      * @param int $groupId
+     *
+     * @return ContactData
      */
     public function setGroupId($groupId)
     {
         $this->groupId = $groupId;
+
+        return $this;
     }
 
     /**
@@ -229,12 +259,17 @@ class ContactData extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param string $lastName
+     *
+     * @return ContactData
      */
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+
+        return $this;
     }
 
     /**
@@ -245,12 +280,17 @@ class ContactData extends ModelEntity
         return $this->lastName;
     }
 
+
     /**
      * @param string $salutation
+     *
+     * @return ContactData
      */
     public function setSalutation($salutation)
     {
         $this->salutation = $salutation;
+
+        return $this;
     }
 
     /**
@@ -261,12 +301,17 @@ class ContactData extends ModelEntity
         return $this->salutation;
     }
 
+
     /**
      * @param string $street
+     *
+     * @return ContactData
      */
     public function setStreet($street)
     {
         $this->street = $street;
+
+        return $this;
     }
 
     /**
@@ -277,12 +322,17 @@ class ContactData extends ModelEntity
         return $this->street;
     }
 
+
     /**
      * @param string $title
+     *
+     * @return ContactData
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
@@ -293,12 +343,17 @@ class ContactData extends ModelEntity
         return $this->title;
     }
 
+
     /**
      * @param string $zipCode
+     *
+     * @return ContactData
      */
     public function setZipCode($zipCode)
     {
         $this->zipCode = $zipCode;
+
+        return $this;
     }
 
     /**

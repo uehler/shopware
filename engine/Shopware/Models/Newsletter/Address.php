@@ -147,12 +147,17 @@ class Address extends LazyFetchModelEntity
         return $this->id;
     }
 
+
     /**
      * @param string $email
+     *
+     * @return Address
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
+        return $this;
     }
 
     /**
@@ -163,12 +168,17 @@ class Address extends LazyFetchModelEntity
         return $this->email;
     }
 
+
     /**
      * @param bool $isCustomer
+     *
+     * @return Address
      */
     public function setIsCustomer($isCustomer)
     {
         $this->isCustomer = $isCustomer;
+
+        return $this;
     }
 
     /**
@@ -179,12 +189,17 @@ class Address extends LazyFetchModelEntity
         return $this->isCustomer;
     }
 
+
     /**
      * @param int $lastMailingId
+     *
+     * @return Address
      */
     public function setLastMailingId($lastMailingId)
     {
         $this->lastMailingId = $lastMailingId;
+
+        return $this;
     }
 
     /**
@@ -195,12 +210,17 @@ class Address extends LazyFetchModelEntity
         return $this->lastMailingId;
     }
 
+
     /**
      * @param int $lastReadId
+     *
+     * @return Address
      */
     public function setLastReadId($lastReadId)
     {
         $this->lastReadId = $lastReadId;
+
+        return $this;
     }
 
     /**
@@ -211,8 +231,11 @@ class Address extends LazyFetchModelEntity
         return $this->lastReadId;
     }
 
+
     /**
      * @param \Shopware\Models\Newsletter\Group $group
+     *
+     * @return Address
      */
     public function setNewsletterGroup($newsletterGroup)
     {
@@ -229,12 +252,17 @@ class Address extends LazyFetchModelEntity
         return $this->newsletterGroup;
     }
 
+
     /**
      * @param int $groupId
+     *
+     * @return Address
      */
     public function setGroupId($groupId)
     {
         $this->groupId = $groupId;
+
+        return $this;
     }
 
     /**
@@ -261,11 +289,16 @@ class Address extends LazyFetchModelEntity
         return $this->added;
     }
 
+
     /**
      * @param \DateTime $added
+     *
+     * @return Address
      */
     public function setAdded($added)
     {
         $this->added = $added;
+
+        return $this;
     }
 }

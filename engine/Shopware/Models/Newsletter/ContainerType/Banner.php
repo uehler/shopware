@@ -99,12 +99,17 @@ class Banner extends ModelEntity
      */
     private $description;
 
+
     /**
      * @param string $description
+     *
+     * @return Banner
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
@@ -115,12 +120,17 @@ class Banner extends ModelEntity
         return $this->description;
     }
 
+
     /**
      * @param string $image
+     *
+     * @return Banner
      */
     public function setImage($image)
     {
         $this->image = $image;
+
+        return $this;
     }
 
     /**
@@ -131,12 +141,17 @@ class Banner extends ModelEntity
         return $this->image;
     }
 
+
     /**
      * @param string $link
+     *
+     * @return Banner
      */
     public function setLink($link)
     {
         $this->link = $link;
+
+        return $this;
     }
 
     /**
@@ -147,12 +162,17 @@ class Banner extends ModelEntity
         return $this->link;
     }
 
+
     /**
      * @param string $target
+     *
+     * @return Banner
      */
     public function setTarget($target)
     {
         $this->target = $target;
+
+        return $this;
     }
 
     /**
@@ -163,16 +183,18 @@ class Banner extends ModelEntity
         return $this->target;
     }
 
+
     /**
      * @param \Shopware\Models\Newsletter\Container $container
      *
-     * @return \Shopware\Models\Newsletter\Container
+     * @return Banner
      */
     public function setContainer($container)
     {
         $this->container = $container;
         $container->setType('ctBanner');
-//        return $this->setOneToOne($container, '\Shopware\Models\Newsletter\Container', 'container', 'banner');
+
+        return $this;
     }
 
     /**

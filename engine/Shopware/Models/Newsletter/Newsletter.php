@@ -202,12 +202,17 @@ class Newsletter extends ModelEntity
         $this->containers = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+
     /**
      * @param \DateTime $date
+     *
+     * @return Newsletter
      */
     public function setDate($date)
     {
         $this->date = $date;
+
+        return $this;
     }
 
     /**
@@ -218,12 +223,17 @@ class Newsletter extends ModelEntity
         return $this->date;
     }
 
+
     /**
      * @param int $clicked
+     *
+     * @return Newsletter
      */
     public function setClicked($clicked)
     {
         $this->clicked = $clicked;
+
+        return $this;
     }
 
     /**
@@ -234,12 +244,17 @@ class Newsletter extends ModelEntity
         return $this->clicked;
     }
 
+
     /**
      * @param string $customerGroup
+     *
+     * @return Newsletter
      */
     public function setCustomerGroup($customerGroup)
     {
         $this->customerGroup = $customerGroup;
+
+        return $this;
     }
 
     /**
@@ -250,12 +265,17 @@ class Newsletter extends ModelEntity
         return $this->customerGroup;
     }
 
+
     /**
      * @param string $groups
+     *
+     * @return Newsletter
      */
     public function setGroups($groups)
     {
         $this->groups = $groups;
+
+        return $this;
     }
 
     /**
@@ -266,12 +286,17 @@ class Newsletter extends ModelEntity
         return $this->groups;
     }
 
+
     /**
      * @param int $languageId
+     *
+     * @return Newsletter
      */
     public function setLanguageId($languageId)
     {
         $this->languageId = $languageId;
+
+        return $this;
     }
 
     /**
@@ -282,12 +307,17 @@ class Newsletter extends ModelEntity
         return $this->languageId;
     }
 
+
     /**
      * @param \DateTime $locked
+     *
+     * @return Newsletter
      */
     public function setLocked($locked)
     {
         $this->locked = $locked;
+
+        return $this;
     }
 
     /**
@@ -298,12 +328,17 @@ class Newsletter extends ModelEntity
         return $this->locked;
     }
 
+
     /**
      * @param bool $plaintext
+     *
+     * @return Newsletter
      */
     public function setPlaintext($plaintext)
     {
         $this->plaintext = $plaintext;
+
+        return $this;
     }
 
     /**
@@ -314,12 +349,17 @@ class Newsletter extends ModelEntity
         return $this->plaintext;
     }
 
+
     /**
      * @param bool $publish
+     *
+     * @return Newsletter
      */
     public function setPublish($publish)
     {
         $this->publish = $publish;
+
+        return $this;
     }
 
     /**
@@ -330,12 +370,17 @@ class Newsletter extends ModelEntity
         return $this->publish;
     }
 
+
     /**
      * @param int $read
+     *
+     * @return Newsletter
      */
     public function setRead($read)
     {
         $this->read = $read;
+
+        return $this;
     }
 
     /**
@@ -346,12 +391,17 @@ class Newsletter extends ModelEntity
         return $this->read;
     }
 
+
     /**
      * @param int $recipients
+     *
+     * @return Newsletter
      */
     public function setRecipients($recipients)
     {
         $this->recipients = $recipients;
+
+        return $this;
     }
 
     /**
@@ -362,12 +412,17 @@ class Newsletter extends ModelEntity
         return $this->recipients;
     }
 
+
     /**
      * @param string $senderMail
+     *
+     * @return Newsletter
      */
     public function setSenderMail($senderMail)
     {
         $this->senderMail = $senderMail;
+
+        return $this;
     }
 
     /**
@@ -378,12 +433,17 @@ class Newsletter extends ModelEntity
         return $this->senderMail;
     }
 
+
     /**
      * @param string $senderName
+     *
+     * @return Newsletter
      */
     public function setSenderName($senderName)
     {
         $this->senderName = $senderName;
+
+        return $this;
     }
 
     /**
@@ -394,12 +454,17 @@ class Newsletter extends ModelEntity
         return $this->senderName;
     }
 
+
     /**
      * @param int $status
+     *
+     * @return Newsletter
      */
     public function setStatus($status)
     {
         $this->status = $status;
+
+        return $this;
     }
 
     /**
@@ -410,12 +475,17 @@ class Newsletter extends ModelEntity
         return $this->status;
     }
 
+
     /**
      * @param string $subject
+     *
+     * @return Newsletter
      */
     public function setSubject($subject)
     {
         $this->subject = $subject;
+
+        return $this;
     }
 
     /**
@@ -426,12 +496,17 @@ class Newsletter extends ModelEntity
         return $this->subject;
     }
 
+
     /**
      * @param int $templateId
+     *
+     * @return Newsletter
      */
     public function setTemplateId($templateId)
     {
         $this->templateId = $templateId;
+
+        return $this;
     }
 
     /**
@@ -442,12 +517,14 @@ class Newsletter extends ModelEntity
         return $this->templateId;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $containers
+     *
+     * @return ModelEntity
      */
     public function setContainers($containers)
     {
-        //        $this->containers = $containers;
         return $this->setOneToMany($containers, '\Shopware\Models\Newsletter\Container', 'containers', 'newsletter');
     }
 
@@ -491,11 +568,16 @@ class Newsletter extends ModelEntity
         return $this->timedDelivery;
     }
 
+
     /**
      * @param \DateTime $timedDelivery
+     *
+     * @return Newsletter
      */
     public function setTimedDelivery($timedDelivery)
     {
         $this->timedDelivery = $timedDelivery;
+
+        return $this;
     }
 }

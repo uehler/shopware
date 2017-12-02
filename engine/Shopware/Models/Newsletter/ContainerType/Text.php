@@ -99,12 +99,17 @@ class Text extends ModelEntity
      */
     private $alignment;
 
+
     /**
      * @param string $alignment
+     *
+     * @return Text
      */
     public function setAlignment($alignment)
     {
         $this->alignment = $alignment;
+
+        return $this;
     }
 
     /**
@@ -115,17 +120,19 @@ class Text extends ModelEntity
         return $this->alignment;
     }
 
+
     /**
      * @param \Shopware\Models\Newsletter\Container $container
      * @param string                                $type
      *
-     * @return \Shopware\Models\Newsletter\Container
+     * @return Text
      */
     public function setContainer($container, $type = 'ctText')
     {
         $this->container = $container;
         $container->setType($type);
-//        return $this->setOneToOne($container, '\Shopware\Models\Newsletter\Container', 'container', 'text');
+
+        return $this;
     }
 
     /**
@@ -136,12 +143,17 @@ class Text extends ModelEntity
         return $this->container;
     }
 
+
     /**
      * @param string $content
+     *
+     * @return Text
      */
     public function setContent($content)
     {
         $this->content = $content;
+
+        return $this;
     }
 
     /**
@@ -152,12 +164,17 @@ class Text extends ModelEntity
         return $this->content;
     }
 
+
     /**
      * @param string $headline
+     *
+     * @return Text
      */
     public function setHeadline($headline)
     {
         $this->headline = $headline;
+
+        return $this;
     }
 
     /**
@@ -168,12 +185,17 @@ class Text extends ModelEntity
         return $this->headline;
     }
 
+
     /**
      * @param string $image
+     *
+     * @return Text
      */
     public function setImage($image)
     {
         $this->image = $image;
+
+        return $this;
     }
 
     /**
@@ -184,12 +206,17 @@ class Text extends ModelEntity
         return $this->image;
     }
 
+
     /**
      * @param string $link
+     *
+     * @return Text
      */
     public function setLink($link)
     {
         $this->link = $link;
+
+        return $this;
     }
 
     /**

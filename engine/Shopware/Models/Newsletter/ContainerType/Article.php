@@ -117,15 +117,18 @@ class Article extends LazyFetchModelEntity
         return $this->id;
     }
 
+
     /**
      * @param \Shopware\Models\Newsletter\Container $container
      *
-     * @return \Shopware\Models\Newsletter\Container
+     * @return Article
      */
     public function setContainer($container)
     {
         $this->container = $container;
         $container->setType('ctArticles');
+
+        return $this;
     }
 
     /**
@@ -136,12 +139,17 @@ class Article extends LazyFetchModelEntity
         return $this->container;
     }
 
+
     /**
      * @param string $name
+     *
+     * @return Article
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -152,12 +160,17 @@ class Article extends LazyFetchModelEntity
         return $this->name;
     }
 
+
     /**
      * @param int $position
+     *
+     * @return Article
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -168,12 +181,17 @@ class Article extends LazyFetchModelEntity
         return $this->position;
     }
 
+
     /**
      * @param string $type
+     *
+     * @return Article
      */
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
     }
 
     /**
@@ -184,12 +202,17 @@ class Article extends LazyFetchModelEntity
         return $this->type;
     }
 
+
     /**
      * @param \Shopware\Models\Article\Detail $articleDetail
+     *
+     * @return Article
      */
     public function setArticleDetail($articleDetail)
     {
         $this->articleDetail = $articleDetail;
+
+        return $this;
     }
 
     /**
