@@ -175,12 +175,17 @@ class Preset extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param string $name
+     *
+     * @return Preset
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -199,12 +204,17 @@ class Preset extends ModelEntity
         return $this->premium;
     }
 
+
     /**
      * @param bool $premium
+     *
+     * @return Preset
      */
     public function setPremium($premium)
     {
         $this->premium = $premium;
+
+        return $this;
     }
 
     /**
@@ -215,12 +225,17 @@ class Preset extends ModelEntity
         return $this->custom;
     }
 
+
     /**
      * @param bool $custom
+     *
+     * @return Preset
      */
     public function setCustom($custom)
     {
         $this->custom = $custom;
+
+        return $this;
     }
 
     /**
@@ -231,12 +246,17 @@ class Preset extends ModelEntity
         return $this->thumbnail;
     }
 
+
     /**
      * @param string $thumbnail
+     *
+     * @return Preset
      */
     public function setThumbnail($thumbnail)
     {
         $this->thumbnail = $thumbnail;
+
+        return $this;
     }
 
     /**
@@ -247,12 +267,17 @@ class Preset extends ModelEntity
         return $this->preview;
     }
 
+
     /**
      * @param string $preview
+     *
+     * @return Preset
      */
     public function setPreview($preview)
     {
         $this->preview = $preview;
+
+        return $this;
     }
 
     /**
@@ -263,12 +288,17 @@ class Preset extends ModelEntity
         return $this->presetData;
     }
 
+
     /**
      * @param string $presetData
+     *
+     * @return Preset
      */
     public function setPresetData($presetData)
     {
         $this->presetData = $presetData;
+
+        return $this;
     }
 
     /**
@@ -279,12 +309,17 @@ class Preset extends ModelEntity
         return $this->assetsImported;
     }
 
+
     /**
      * @param bool $assetsImported
+     *
+     * @return Preset
      */
     public function setAssetsImported($assetsImported)
     {
         $this->assetsImported = $assetsImported;
+
+        return $this;
     }
 
     /**
@@ -295,12 +330,17 @@ class Preset extends ModelEntity
         return $this->hidden;
     }
 
+
     /**
      * @param bool $hidden
+     *
+     * @return Preset
      */
     public function setHidden($hidden)
     {
         $this->hidden = $hidden;
+
+        return $this;
     }
 
     /**
@@ -321,12 +361,17 @@ class Preset extends ModelEntity
         return $this->translations;
     }
 
+
     /**
      * @param string $requiredPlugins
+     *
+     * @return Preset
      */
     public function setRequiredPlugins($requiredPlugins)
     {
         $this->requiredPlugins = $requiredPlugins;
+
+        return $this;
     }
 
     /**
@@ -345,11 +390,16 @@ class Preset extends ModelEntity
         return $this->emotionTranslations;
     }
 
+
     /**
      * @param string $emotionTranslations
+     *
+     * @return Preset
      */
     public function setEmotionTranslations($emotionTranslations)
     {
         $this->emotionTranslations = $emotionTranslations;
+
+        return $this;
     }
 }

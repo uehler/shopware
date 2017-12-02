@@ -100,12 +100,17 @@ class PresetTranslation extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param string $label
+     *
+     * @return PresetTranslation
      */
     public function setLabel($label)
     {
         $this->label = $label;
+
+        return $this;
     }
 
     /**
@@ -124,12 +129,17 @@ class PresetTranslation extends ModelEntity
         return $this->description;
     }
 
+
     /**
      * @param string $description
+     *
+     * @return PresetTranslation
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
@@ -140,12 +150,17 @@ class PresetTranslation extends ModelEntity
         return $this->locale;
     }
 
+
     /**
      * @param string $locale
+     *
+     * @return PresetTranslation
      */
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
+        return $this;
     }
 
     /**
@@ -156,11 +171,16 @@ class PresetTranslation extends ModelEntity
         return $this->preset;
     }
 
+
     /**
      * @param Preset $preset
+     *
+     * @return PresetTranslation
      */
     public function setPreset(Preset $preset)
     {
         $this->preset = $preset;
+
+        return $this;
     }
 }

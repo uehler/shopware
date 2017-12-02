@@ -120,12 +120,17 @@ class Data extends ModelEntity
         $this->fieldId = null;
     }
 
+
     /**
      * @param int $componentId
+     *
+     * @return Data
      */
     public function setComponentId($componentId)
     {
         $this->componentId = $componentId;
+
+        return $this;
     }
 
     /**
@@ -136,12 +141,17 @@ class Data extends ModelEntity
         return $this->componentId;
     }
 
+
     /**
      * @param string $elementId
+     *
+     * @return Data
      */
     public function setElementId($elementId)
     {
         $this->elementId = $elementId;
+
+        return $this;
     }
 
     /**
@@ -152,12 +162,17 @@ class Data extends ModelEntity
         return $this->elementId;
     }
 
+
     /**
      * @param int $fieldId
+     *
+     * @return Data
      */
     public function setFieldId($fieldId)
     {
         $this->fieldId = $fieldId;
+
+        return $this;
     }
 
     /**
@@ -176,12 +191,17 @@ class Data extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param string $value
+     *
+     * @return Data
      */
     public function setValue($value)
     {
         $this->value = $value;
+
+        return $this;
     }
 
     /**
@@ -200,6 +220,8 @@ class Data extends ModelEntity
     public function setField($field)
     {
         $this->field = $field;
+
+        return $this;
     }
 
     public function getComponent()
@@ -210,6 +232,8 @@ class Data extends ModelEntity
     public function setComponent($component)
     {
         $this->component = $component;
+
+        return $this;
     }
 
     public function getElement()
@@ -220,6 +244,8 @@ class Data extends ModelEntity
     public function setElement($element)
     {
         $this->element = $element;
+
+        return $this;
     }
 
     /**
@@ -230,12 +256,17 @@ class Data extends ModelEntity
         return $this->emotionId;
     }
 
+
     /**
      * @param string $emotionId
+     *
+     * @return Data
      */
     public function setEmotionId($emotionId)
     {
         $this->emotionId = $emotionId;
+
+        return $this;
     }
 
     /**
@@ -246,11 +277,16 @@ class Data extends ModelEntity
         return $this->emotion;
     }
 
+
     /**
      * @param mixed $emotion
+     *
+     * @return Data
      */
     public function setEmotion($emotion)
     {
         $this->emotion = $emotion;
+
+        return $this;
     }
 }

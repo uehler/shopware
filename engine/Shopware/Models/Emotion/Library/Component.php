@@ -197,15 +197,20 @@ class Component extends ModelEntity
         return $this->name;
     }
 
+
     /**
      * Contains the name of the grid which can be configured in the
      * backend emotion module.
      *
      * @param string $name
+     *
+     * @return Component
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -219,15 +224,20 @@ class Component extends ModelEntity
         return $this->description;
     }
 
+
     /**
      * Contains the component description which displayed in the backend
      * module of
      *
      * @param  $description
+     *
+     * @return Component
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
@@ -240,14 +250,19 @@ class Component extends ModelEntity
         return $this->template;
     }
 
+
     /**
      * Contains the template file which used to display the component data.
      *
      * @param string $template
+     *
+     * @return Component
      */
     public function setTemplate($template)
     {
         $this->template = $template;
+
+        return $this;
     }
 
     /**
@@ -258,12 +273,17 @@ class Component extends ModelEntity
         return $this->cls;
     }
 
+
     /**
      * @param string $cls
+     *
+     * @return Component
      */
     public function setCls($cls)
     {
         $this->cls = $cls;
+
+        return $this;
     }
 
     /**
@@ -274,12 +294,17 @@ class Component extends ModelEntity
         return $this->pluginId;
     }
 
+
     /**
      * @param int $pluginId
+     *
+     * @return Component
      */
     public function setPluginId($pluginId)
     {
         $this->pluginId = $pluginId;
+
+        return $this;
     }
 
     /**
@@ -290,12 +315,17 @@ class Component extends ModelEntity
         return $this->xType;
     }
 
+
     /**
      * @param string $xType
+     *
+     * @return Component
      */
     public function setXType($xType)
     {
         $this->xType = $xType;
+
+        return $this;
     }
 
     /**
@@ -306,12 +336,17 @@ class Component extends ModelEntity
         return $this->convertFunction;
     }
 
+
     /**
      * @param string $convertFunction
+     *
+     * @return Component
      */
     public function setConvertFunction($convertFunction)
     {
         $this->convertFunction = $convertFunction;
+
+        return $this;
     }
 
     /**
@@ -322,12 +357,17 @@ class Component extends ModelEntity
         return $this->plugin;
     }
 
+
     /**
      * @param \Shopware\Models\Plugin\Plugin $plugin
+     *
+     * @return Component
      */
     public function setPlugin($plugin)
     {
         $this->plugin = $plugin;
+
+        return $this;
     }
 
     /**

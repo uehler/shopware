@@ -200,15 +200,20 @@ class Field extends ModelEntity
         return $this->componentId;
     }
 
+
     /**
      * Id of the associated \Shopware\Models\Library\Component
      * which will be displayed in the shopware backend component library.
      *
      * @param int $componentId
+     *
+     * @return Field
      */
     public function setComponentId($componentId)
     {
         $this->componentId = $componentId;
+
+        return $this;
     }
 
     /**
@@ -221,14 +226,19 @@ class Field extends ModelEntity
         return $this->xType;
     }
 
+
     /**
      * The xType for the backend module.
      *
      * @param string $xType
+     *
+     * @return Field
      */
     public function setXType($xType)
     {
         $this->xType = $xType;
+
+        return $this;
     }
 
     /**
@@ -241,14 +251,19 @@ class Field extends ModelEntity
         return $this->supportText;
     }
 
+
     /**
      * Contains the support text for the extJs field.
      *
      * @param string $supportText
+     *
+     * @return Field
      */
     public function setSupportText($supportText)
     {
         $this->supportText = $supportText;
+
+        return $this;
     }
 
     /**
@@ -261,14 +276,19 @@ class Field extends ModelEntity
         return $this->helpTitle;
     }
 
+
     /**
      * Contains the help title for the extJs field.
      *
      * @param string $helpTitle
+     *
+     * @return Field
      */
     public function setHelpTitle($helpTitle)
     {
         $this->helpTitle = $helpTitle;
+
+        return $this;
     }
 
     /**
@@ -281,14 +301,19 @@ class Field extends ModelEntity
         return $this->helpText;
     }
 
+
     /**
      * Contains the help title for the extJs field.
      *
      * @param string $helpText
+     *
+     * @return Field
      */
     public function setHelpText($helpText)
     {
         $this->helpText = $helpText;
+
+        return $this;
     }
 
     /**
@@ -303,16 +328,21 @@ class Field extends ModelEntity
         return $this->component;
     }
 
+
     /**
      * Contains the assigned \Shopware\Models\Emotion\Library\Component
      * which can be configured in the backend emotion module.
      * The assigned library component contains the data definition for the grid element.
      *
      * @param \Shopware\Models\Emotion\Library\Component $component
+     *
+     * @return Field
      */
     public function setComponent($component)
     {
         $this->component = $component;
+
+        return $this;
     }
 
     /**
@@ -323,12 +353,17 @@ class Field extends ModelEntity
         return $this->name;
     }
 
+
     /**
      * @param string $name
+     *
+     * @return Field
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -339,12 +374,17 @@ class Field extends ModelEntity
         return $this->fieldLabel;
     }
 
+
     /**
      * @param string $fieldLabel
+     *
+     * @return Field
      */
     public function setFieldLabel($fieldLabel)
     {
         $this->fieldLabel = $fieldLabel;
+
+        return $this;
     }
 
     /**
@@ -355,12 +395,17 @@ class Field extends ModelEntity
         return $this->valueType;
     }
 
+
     /**
      * @param string $valueType
+     *
+     * @return Field
      */
     public function setValueType($valueType)
     {
         $this->valueType = $valueType;
+
+        return $this;
     }
 
     /**
@@ -371,12 +416,17 @@ class Field extends ModelEntity
         return $this->store;
     }
 
+
     /**
      * @param string $store
+     *
+     * @return Field
      */
     public function setStore($store)
     {
         $this->store = $store;
+
+        return $this;
     }
 
     /**
@@ -387,12 +437,17 @@ class Field extends ModelEntity
         return $this->displayField;
     }
 
+
     /**
      * @param string $displayField
+     *
+     * @return Field
      */
     public function setDisplayField($displayField)
     {
         $this->displayField = $displayField;
+
+        return $this;
     }
 
     /**
@@ -403,20 +458,30 @@ class Field extends ModelEntity
         return $this->valueField;
     }
 
+
     /**
      * @param string $valueField
+     *
+     * @return Field
      */
     public function setValueField($valueField)
     {
         $this->valueField = $valueField;
+
+        return $this;
     }
+
 
     /**
      * @param int $allowBlank
+     *
+     * @return Field
      */
     public function setAllowBlank($allowBlank)
     {
         $this->allowBlank = $allowBlank;
+
+        return $this;
     }
 
     /**
@@ -427,12 +492,17 @@ class Field extends ModelEntity
         return $this->allowBlank;
     }
 
+
     /**
      * @param string $defaultValue
+     *
+     * @return Field
      */
     public function setDefaultValue($defaultValue)
     {
         $this->defaultValue = $defaultValue;
+
+        return $this;
     }
 
     /**
@@ -443,12 +513,17 @@ class Field extends ModelEntity
         return $this->defaultValue;
     }
 
+
     /**
      * @param int $position
+     *
+     * @return Field
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -467,11 +542,16 @@ class Field extends ModelEntity
         return $this->translatable;
     }
 
+
     /**
      * @param int $translatable
+     *
+     * @return Field
      */
     public function setTranslatable($translatable)
     {
         $this->translatable = $translatable;
+
+        return $this;
     }
 }

@@ -94,12 +94,17 @@ class Template extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param string $name
+     *
+     * @return Template
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -118,11 +123,16 @@ class Template extends ModelEntity
         return $this->file;
     }
 
+
     /**
      * @param string $file
+     *
+     * @return Template
      */
     public function setFile($file)
     {
         $this->file = $file;
+
+        return $this;
     }
 }

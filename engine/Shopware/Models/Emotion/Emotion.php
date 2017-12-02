@@ -389,14 +389,19 @@ class Emotion extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * Contains the name of the emotion.
      *
      * @param string $name
+     *
+     * @return Emotion
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -409,10 +414,13 @@ class Emotion extends ModelEntity
         return $this->name;
     }
 
+
     /**
      * Create date of the emotion.
      *
      * @param \DateTime|string $createDate
+     *
+     * @return Emotion
      */
     public function setCreateDate($createDate = 'now')
     {
@@ -421,6 +429,8 @@ class Emotion extends ModelEntity
         } else {
             $this->createDate = $createDate;
         }
+
+        return $this;
     }
 
     /**
@@ -433,11 +443,14 @@ class Emotion extends ModelEntity
         return $this->createDate;
     }
 
+
     /**
      * With the $validFrom and $validTo property you can define
      * a date range in which the emotion will be displayed.
      *
      * @param \DateTime|string $validFrom
+     *
+     * @return Emotion
      */
     public function setValidFrom($validFrom)
     {
@@ -446,6 +459,8 @@ class Emotion extends ModelEntity
         } else {
             $this->validFrom = $validFrom;
         }
+
+        return $this;
     }
 
     /**
@@ -459,11 +474,14 @@ class Emotion extends ModelEntity
         return $this->validFrom;
     }
 
+
     /**
      * With the $validFrom and $validTo property you can define
      * a date range in which the emotion will be displayed.
      *
      * @param \DateTime|string $validTo
+     *
+     * @return Emotion
      */
     public function setValidTo($validTo)
     {
@@ -472,6 +490,8 @@ class Emotion extends ModelEntity
         } else {
             $this->validTo = $validTo;
         }
+
+        return $this;
     }
 
     /**
@@ -576,12 +596,17 @@ class Emotion extends ModelEntity
         return $this->setOneToMany($elements, '\Shopware\Models\Emotion\Element', 'elements', 'emotion');
     }
 
+
     /**
      * @param int $isLandingPage
+     *
+     * @return Emotion
      */
     public function setIsLandingPage($isLandingPage)
     {
         $this->isLandingPage = $isLandingPage;
+
+        return $this;
     }
 
     /**
@@ -592,12 +617,17 @@ class Emotion extends ModelEntity
         return $this->isLandingPage;
     }
 
+
     /**
      * @param string $seoDescription
+     *
+     * @return Emotion
      */
     public function setSeoDescription($seoDescription)
     {
         $this->seoDescription = $seoDescription;
+
+        return $this;
     }
 
     /**
@@ -608,12 +638,17 @@ class Emotion extends ModelEntity
         return $this->seoDescription;
     }
 
+
     /**
      * @param string $seoTitle
+     *
+     * @return Emotion
      */
     public function setSeoTitle($seoTitle)
     {
         $this->seoTitle = $seoTitle;
+
+        return $this;
     }
 
     /**
@@ -624,12 +659,17 @@ class Emotion extends ModelEntity
         return $this->seoTitle;
     }
 
+
     /**
      * @param string $seoKeywords
+     *
+     * @return Emotion
      */
     public function setSeoKeywords($seoKeywords)
     {
         $this->seoKeywords = $seoKeywords;
+
+        return $this;
     }
 
     /**
@@ -640,12 +680,17 @@ class Emotion extends ModelEntity
         return $this->seoKeywords;
     }
 
+
     /**
      * @param int $active
+     *
+     * @return Emotion
      */
     public function setActive($active)
     {
         $this->active = $active;
+
+        return $this;
     }
 
     /**
@@ -664,12 +709,17 @@ class Emotion extends ModelEntity
         return $this->categories;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $categories
+     *
+     * @return Emotion
      */
     public function setCategories($categories)
     {
         $this->categories = $categories;
+
+        return $this;
     }
 
     /**
@@ -680,12 +730,17 @@ class Emotion extends ModelEntity
         return $this->shops;
     }
 
+
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $shops
+     *
+     * @return Emotion
      */
     public function setShops($shops)
     {
         $this->shops = $shops;
+
+        return $this;
     }
 
     /**
@@ -696,12 +751,17 @@ class Emotion extends ModelEntity
         return $this->showListing;
     }
 
+
     /**
      * @param bool $showListing
+     *
+     * @return Emotion
      */
     public function setShowListing($showListing)
     {
         $this->showListing = $showListing;
+
+        return $this;
     }
 
     /**
@@ -712,20 +772,30 @@ class Emotion extends ModelEntity
         return $this->template;
     }
 
+
     /**
      * @param Template $template
+     *
+     * @return Emotion
      */
     public function setTemplate(Template $template = null)
     {
         $this->template = $template;
+
+        return $this;
     }
+
 
     /**
      * @param int $device
+     *
+     * @return Emotion
      */
     public function setDevice($device)
     {
         $this->device = $device;
+
+        return $this;
     }
 
     /**
@@ -736,12 +806,17 @@ class Emotion extends ModelEntity
         return $this->device;
     }
 
+
     /**
      * @param int $fullscreen
+     *
+     * @return Emotion
      */
     public function setFullscreen($fullscreen)
     {
         $this->fullscreen = $fullscreen;
+
+        return $this;
     }
 
     /**
@@ -752,12 +827,17 @@ class Emotion extends ModelEntity
         return $this->fullscreen;
     }
 
+
     /**
      * @param $rows
+     *
+     * @return Emotion
      */
     public function setRows($rows)
     {
         $this->rows = $rows;
+
+        return $this;
     }
 
     /**
@@ -776,12 +856,17 @@ class Emotion extends ModelEntity
         return $this->cols;
     }
 
+
     /**
      * @param int $cols
+     *
+     * @return Emotion
      */
     public function setCols($cols)
     {
         $this->cols = $cols;
+
+        return $this;
     }
 
     /**
@@ -792,12 +877,17 @@ class Emotion extends ModelEntity
         return $this->cellSpacing;
     }
 
+
     /**
      * @param int $cellSpacing
+     *
+     * @return Emotion
      */
     public function setCellSpacing($cellSpacing)
     {
         $this->cellSpacing = $cellSpacing;
+
+        return $this;
     }
 
     /**
@@ -808,12 +898,17 @@ class Emotion extends ModelEntity
         return $this->cellHeight;
     }
 
+
     /**
      * @param int $cellHeight
+     *
+     * @return Emotion
      */
     public function setCellHeight($cellHeight)
     {
         $this->cellHeight = $cellHeight;
+
+        return $this;
     }
 
     /**
@@ -824,20 +919,30 @@ class Emotion extends ModelEntity
         return $this->articleHeight;
     }
 
+
     /**
      * @param int $articleHeight
+     *
+     * @return Emotion
      */
     public function setArticleHeight($articleHeight)
     {
         $this->articleHeight = $articleHeight;
+
+        return $this;
     }
 
-    /*
-     * @param string $responsiveMode
+
+    /**
+     * @param $mode
+     *
+     * @return Emotion
      */
     public function setMode($mode)
     {
         $this->mode = $mode;
+
+        return $this;
     }
 
     /*
@@ -856,12 +961,17 @@ class Emotion extends ModelEntity
         return $this->position;
     }
 
+
     /**
      * @param int $position
+     *
+     * @return Emotion
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -872,12 +982,17 @@ class Emotion extends ModelEntity
         return $this->parentId;
     }
 
+
     /**
      * @param int $parentId
+     *
+     * @return Emotion
      */
     public function setParentId($parentId)
     {
         $this->parentId = $parentId;
+
+        return $this;
     }
 
     /**
@@ -888,12 +1003,17 @@ class Emotion extends ModelEntity
         return $this->previewId;
     }
 
+
     /**
      * @param int $previewId
+     *
+     * @return Emotion
      */
     public function setPreviewId($previewId)
     {
         $this->previewId = $previewId;
+
+        return $this;
     }
 
     /**
@@ -904,12 +1024,17 @@ class Emotion extends ModelEntity
         return $this->previewSecret;
     }
 
+
     /**
      * @param string $previewSecret
+     *
+     * @return Emotion
      */
     public function setPreviewSecret($previewSecret)
     {
         $this->previewSecret = $previewSecret;
+
+        return $this;
     }
 
     /**
@@ -920,12 +1045,17 @@ class Emotion extends ModelEntity
         return $this->replacement;
     }
 
+
     /**
      * @param string|null $replacement
+     *
+     * @return Emotion
      */
     public function setReplacement($replacement)
     {
         $this->replacement = $replacement;
+
+        return $this;
     }
 
     public function getCustomerStreamIds()
@@ -933,8 +1063,16 @@ class Emotion extends ModelEntity
         return $this->customerStreamIds;
     }
 
+
+    /**
+     * @param $customerStreamIds
+     *
+     * @return Emotion
+     */
     public function setCustomerStreamIds($customerStreamIds)
     {
         $this->customerStreamIds = $customerStreamIds;
+
+        return $this;
     }
 }

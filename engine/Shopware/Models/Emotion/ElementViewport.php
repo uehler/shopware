@@ -144,12 +144,17 @@ class ElementViewport extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * @param int $id
+     *
+     * @return ElementViewport
      */
     public function setId($id)
     {
         $this->id = $id;
+
+        return $this;
     }
 
     /**
@@ -160,12 +165,17 @@ class ElementViewport extends ModelEntity
         return $this->alias;
     }
 
+
     /**
      * @param string $alias
+     *
+     * @return ElementViewport
      */
     public function setAlias($alias)
     {
         $this->alias = $alias;
+
+        return $this;
     }
 
     /**
@@ -176,12 +186,17 @@ class ElementViewport extends ModelEntity
         return $this->startRow;
     }
 
+
     /**
      * @param int $startRow
+     *
+     * @return ElementViewport
      */
     public function setStartRow($startRow)
     {
         $this->startRow = $startRow;
+
+        return $this;
     }
 
     /**
@@ -192,12 +207,17 @@ class ElementViewport extends ModelEntity
         return $this->startCol;
     }
 
+
     /**
      * @param int $startCol
+     *
+     * @return ElementViewport
      */
     public function setStartCol($startCol)
     {
         $this->startCol = $startCol;
+
+        return $this;
     }
 
     /**
@@ -208,12 +228,17 @@ class ElementViewport extends ModelEntity
         return $this->endRow;
     }
 
+
     /**
      * @param int $endRow
+     *
+     * @return ElementViewport
      */
     public function setEndRow($endRow)
     {
         $this->endRow = $endRow;
+
+        return $this;
     }
 
     /**
@@ -224,12 +249,17 @@ class ElementViewport extends ModelEntity
         return $this->endCol;
     }
 
+
     /**
      * @param int $endCol
+     *
+     * @return ElementViewport
      */
     public function setEndCol($endCol)
     {
         $this->endCol = $endCol;
+
+        return $this;
     }
 
     /**
@@ -240,12 +270,17 @@ class ElementViewport extends ModelEntity
         return $this->element;
     }
 
+
     /**
      * @param Element $element
+     *
+     * @return ElementViewport
      */
     public function setElement($element)
     {
         $this->element = $element;
+
+        return $this;
     }
 
     /**
@@ -256,12 +291,17 @@ class ElementViewport extends ModelEntity
         return $this->emotion;
     }
 
+
     /**
      * @param Emotion $emotion
+     *
+     * @return ElementViewport
      */
     public function setEmotion($emotion)
     {
         $this->emotion = $emotion;
+
+        return $this;
     }
 
     /**
@@ -272,11 +312,16 @@ class ElementViewport extends ModelEntity
         return $this->visible;
     }
 
+
     /**
      * @param bool $visible
+     *
+     * @return ElementViewport
      */
     public function setVisible($visible)
     {
         $this->visible = $visible;
+
+        return $this;
     }
 }

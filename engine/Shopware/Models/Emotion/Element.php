@@ -214,14 +214,19 @@ class Element extends ModelEntity
         return $this->startRow;
     }
 
+
     /**
      * Defines on which column the element starts.
      *
      * @param int $startRow
+     *
+     * @return Element
      */
     public function setStartRow($startRow)
     {
         $this->startRow = $startRow;
+
+        return $this;
     }
 
     /**
@@ -234,14 +239,19 @@ class Element extends ModelEntity
         return $this->startCol;
     }
 
+
     /**
      * Defines on which row the element starts.
      *
      * @param int $startCol
+     *
+     * @return Element
      */
     public function setStartCol($startCol)
     {
         $this->startCol = $startCol;
+
+        return $this;
     }
 
     /**
@@ -252,12 +262,17 @@ class Element extends ModelEntity
         return $this->endRow;
     }
 
+
     /**
      * @param int $endRow
+     *
+     * @return Element
      */
     public function setEndRow($endRow)
     {
         $this->endRow = $endRow;
+
+        return $this;
     }
 
     /**
@@ -268,12 +283,17 @@ class Element extends ModelEntity
         return $this->endCol;
     }
 
+
     /**
      * @param string $cssClass
+     *
+     * @return Element
      */
     public function setCssClass($cssClass)
     {
         $this->cssClass = $cssClass;
+
+        return $this;
     }
 
     /**
@@ -284,12 +304,17 @@ class Element extends ModelEntity
         return $this->cssClass;
     }
 
+
     /**
      * @param int $endCol
+     *
+     * @return Element
      */
     public function setEndCol($endCol)
     {
         $this->endCol = $endCol;
+
+        return $this;
     }
 
     /**
@@ -306,6 +331,7 @@ class Element extends ModelEntity
         return $this->emotion;
     }
 
+
     /**
      * Contains the assigned \Shopware\Models\Emotion\Emotion
      * which can be configured in the backend emotion module.
@@ -314,10 +340,14 @@ class Element extends ModelEntity
      * emotion and grid elements.
      *
      * @param \Shopware\Models\Emotion\Emotion $emotion
+     *
+     * @return Element
      */
     public function setEmotion($emotion)
     {
         $this->emotion = $emotion;
+
+        return $this;
     }
 
     /**
@@ -368,15 +398,20 @@ class Element extends ModelEntity
         return $this->component;
     }
 
+
     /**
      * Contains the assigned \Shopware\Models\Emotion\Library\Component
      * which can be configured in the backend emotion module.
      * The assigned library component contains the data definition for the grid element.
      *
      * @param \Shopware\Models\Emotion\Library\Component $component
+     *
+     * @return Element
      */
     public function setComponent($component)
     {
         $this->component = $component;
+
+        return $this;
     }
 }
