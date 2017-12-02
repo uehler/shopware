@@ -367,14 +367,19 @@ class Category extends ModelEntity
         $this->added = new \DateTime();
     }
 
+
     /**
      * Sets the primary key
      *
      * @param $id
+     *
+     * @return Category
      */
     public function setPrimaryIdentifier($id)
     {
         $this->id = (int) $id;
+
+        return $this;
     }
 
     /**
@@ -537,7 +542,7 @@ class Category extends ModelEntity
      *
      * @param \DateTime|string $changed
      *
-     * @return Article
+     * @return Category
      */
     public function setChanged($changed = 'now')
     {
@@ -728,14 +733,19 @@ class Category extends ModelEntity
         return $this->blog;
     }
 
+
     /**
      * Set category as a blog category
      *
      * @param bool $blog
+     *
+     * @return Category
      */
     public function setBlog($blog)
     {
         $this->blog = $blog;
+
+        return $this;
     }
 
     /**
@@ -772,14 +782,19 @@ class Category extends ModelEntity
         return $this->externalTarget;
     }
 
+
     /**
      * Sets the target property for the external link
      *
      * @param string $externalTarget
+     *
+     * @return Category
      */
     public function setExternalTarget($externalTarget)
     {
         $this->externalTarget = $externalTarget;
+
+        return $this;
     }
 
     /**
@@ -1014,12 +1029,17 @@ class Category extends ModelEntity
         return $this->metaTitle;
     }
 
+
     /**
      * @param string $metaTitle
+     *
+     * @return Category
      */
     public function setMetaTitle($metaTitle)
     {
         $this->metaTitle = $metaTitle;
+
+        return $this;
     }
 
     /**
@@ -1030,12 +1050,17 @@ class Category extends ModelEntity
         return $this->stream;
     }
 
+
     /**
      * @param ProductStream $stream
+     *
+     * @return Category
      */
     public function setStream(ProductStream $stream = null)
     {
         $this->stream = $stream;
+
+        return $this;
     }
 
     /**
@@ -1054,12 +1079,17 @@ class Category extends ModelEntity
         return $this->sortingIds;
     }
 
+
     /**
      * @param string $sortingIds
+     *
+     * @return Category
      */
     public function setSortingIds($sortingIds)
     {
         $this->sortingIds = $sortingIds;
+
+        return $this;
     }
 
     /**
@@ -1070,12 +1100,17 @@ class Category extends ModelEntity
         return $this->hideSortings;
     }
 
+
     /**
      * @param bool $hideSortings
+     *
+     * @return Category
      */
     public function setHideSortings($hideSortings)
     {
         $this->hideSortings = $hideSortings;
+
+        return $this;
     }
 
     /**
@@ -1086,12 +1121,17 @@ class Category extends ModelEntity
         return $this->facetIds;
     }
 
+
     /**
      * @param string $facetIds
+     *
+     * @return Category
      */
     public function setFacetIds($facetIds)
     {
         $this->facetIds = $facetIds;
+
+        return $this;
     }
 
     /**
