@@ -135,12 +135,17 @@ class Configuration extends ModelEntity
         return $this->tableName;
     }
 
+
     /**
      * @param string $tableName
+     *
+     * @return Configuration
      */
     public function setTableName($tableName)
     {
         $this->tableName = $tableName;
+
+        return $this;
     }
 
     /**
@@ -151,12 +156,17 @@ class Configuration extends ModelEntity
         return $this->columnName;
     }
 
+
     /**
      * @param string $columnName
+     *
+     * @return Configuration
      */
     public function setColumnName($columnName)
     {
         $this->columnName = $columnName;
+
+        return $this;
     }
 
     /**
@@ -167,12 +177,17 @@ class Configuration extends ModelEntity
         return $this->columnType;
     }
 
+
     /**
      * @param string $columnType
+     *
+     * @return Configuration
      */
     public function setColumnType($columnType)
     {
         $this->columnType = $columnType;
+
+        return $this;
     }
 
     /**
@@ -183,12 +198,17 @@ class Configuration extends ModelEntity
         return $this->label;
     }
 
+
     /**
      * @param string $label
+     *
+     * @return Configuration
      */
     public function setLabel($label)
     {
         $this->label = $label;
+
+        return $this;
     }
 
     /**
@@ -199,12 +219,17 @@ class Configuration extends ModelEntity
         return $this->helpText;
     }
 
+
     /**
      * @param string $helpText
+     *
+     * @return Configuration
      */
     public function setHelpText($helpText)
     {
         $this->helpText = $helpText;
+
+        return $this;
     }
 
     /**
@@ -215,12 +240,17 @@ class Configuration extends ModelEntity
         return $this->supportText;
     }
 
+
     /**
      * @param string $supportText
+     *
+     * @return Configuration
      */
     public function setSupportText($supportText)
     {
         $this->supportText = $supportText;
+
+        return $this;
     }
 
     /**
@@ -231,12 +261,17 @@ class Configuration extends ModelEntity
         return $this->translatable;
     }
 
+
     /**
      * @param bool $translatable
+     *
+     * @return Configuration
      */
     public function setTranslatable($translatable)
     {
         $this->translatable = $translatable;
+
+        return $this;
     }
 
     /**
@@ -247,12 +282,17 @@ class Configuration extends ModelEntity
         return $this->displayInBackend;
     }
 
+
     /**
      * @param bool $displayInBackend
+     *
+     * @return Configuration
      */
     public function setDisplayInBackend($displayInBackend)
     {
         $this->displayInBackend = $displayInBackend;
+
+        return $this;
     }
 
     /**
@@ -263,12 +303,17 @@ class Configuration extends ModelEntity
         return $this->position;
     }
 
+
     /**
      * @param string $position
+     *
+     * @return Configuration
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
     }
 
     /**
@@ -279,12 +324,17 @@ class Configuration extends ModelEntity
         return $this->custom;
     }
 
+
     /**
      * @param bool $custom
+     *
+     * @return Configuration
      */
     public function setCustom($custom)
     {
         $this->custom = $custom;
+
+        return $this;
     }
 
     /**
@@ -295,12 +345,17 @@ class Configuration extends ModelEntity
         return $this->entity;
     }
 
+
     /**
      * @param string $entity
+     *
+     * @return Configuration
      */
     public function setEntity($entity)
     {
         $this->entity = $entity;
+
+        return $this;
     }
 
     /**
@@ -311,12 +366,17 @@ class Configuration extends ModelEntity
         return $this->arrayStore;
     }
 
+
     /**
      * @param string $arrayStore
+     *
+     * @return Configuration
      */
     public function setArrayStore($arrayStore)
     {
         $this->arrayStore = $arrayStore;
+
+        return $this;
     }
 
     /**
@@ -327,11 +387,16 @@ class Configuration extends ModelEntity
         return $this->defaultValue;
     }
 
+
     /**
      * @param string $defaultValue
+     *
+     * @return Configuration
      */
     public function setDefaultValue($defaultValue)
     {
         $this->defaultValue = $defaultValue;
+
+        return $this;
     }
 }
