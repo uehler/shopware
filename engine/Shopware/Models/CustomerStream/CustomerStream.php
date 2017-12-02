@@ -100,12 +100,17 @@ class CustomerStream extends ModelEntity
         return $this->name;
     }
 
+
     /**
      * @param $name string
+     *
+     * @return CustomerStream
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -116,12 +121,17 @@ class CustomerStream extends ModelEntity
         return $this->description;
     }
 
+
     /**
      * @param string $description
+     *
+     * @return CustomerStream
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 
     /**
@@ -132,12 +142,17 @@ class CustomerStream extends ModelEntity
         return $this->conditions;
     }
 
+
     /**
      * @param string|null $conditions
+     *
+     * @return CustomerStream
      */
     public function setConditions($conditions)
     {
         $this->conditions = $conditions;
+
+        return $this;
     }
 
     /**
@@ -148,8 +163,11 @@ class CustomerStream extends ModelEntity
         return $this->freezeUp;
     }
 
+
     /**
      * @param $freezeUp \DateTime|string|null
+     *
+     * @return CustomerStream
      */
     public function setFreezeUp($freezeUp)
     {
@@ -157,6 +175,8 @@ class CustomerStream extends ModelEntity
             $freezeUp = new \DateTime($freezeUp);
         }
         $this->freezeUp = $freezeUp;
+
+        return $this;
     }
 
     /**
@@ -167,11 +187,16 @@ class CustomerStream extends ModelEntity
         return $this->static;
     }
 
+
     /**
      * @param $static bool
+     *
+     * @return CustomerStream
      */
     public function setStatic($static)
     {
         $this->static = $static;
+
+        return $this;
     }
 }
