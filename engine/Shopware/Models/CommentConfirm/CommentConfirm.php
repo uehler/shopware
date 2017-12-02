@@ -82,14 +82,19 @@ class CommentConfirm extends ModelEntity
         return $this->id;
     }
 
+
     /**
      * Set hash
      *
      * @param string $hash
+     *
+     * @return CommentConfirm
      */
     public function setHash($hash)
     {
         $this->hash = $hash;
+
+        return $this;
     }
 
     /**
@@ -102,14 +107,19 @@ class CommentConfirm extends ModelEntity
         return $this->hash;
     }
 
+
     /**
      * Set data
      *
      * @param string $data
+     *
+     * @return CommentConfirm
      */
     public function setData($data)
     {
         $this->data = $data;
+
+        return $this;
     }
 
     /**
@@ -122,10 +132,13 @@ class CommentConfirm extends ModelEntity
         return $this->data;
     }
 
+
     /**
      * Set CreationDate
      *
      * @param \DateTime|string $creationDate
+     *
+     * @return CommentConfirm
      */
     public function setCreationDate($creationDate)
     {
@@ -133,6 +146,8 @@ class CommentConfirm extends ModelEntity
             $creationDate = new \DateTime($creationDate);
         }
         $this->creationDate = $creationDate;
+
+        return $this;
     }
 
     /**
@@ -145,12 +160,17 @@ class CommentConfirm extends ModelEntity
         return $this->creationDate;
     }
 
+
     /**
      * @param string $type
+     *
+     * @return CommentConfirm
      */
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
     }
 
     /**
